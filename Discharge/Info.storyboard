@@ -131,7 +131,7 @@
         <scene sceneID="riO-Ln-as5">
             <objects>
                 <navigationController storyboardIdentifier="NavController" title="Info" id="kMv-w1-ynG" customClass="NavController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Directions" image="Bandage" id="7BW-m7-pqp"/>
+                    <tabBarItem key="tabBarItem" title="Home Care" image="Bandage" id="7BW-m7-pqp"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Txi-gD-TRX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
