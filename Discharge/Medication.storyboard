@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="117"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="q9B-AM-Fif" id="zcK-mf-EAQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="116"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="116.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yMk-je-Txs">
@@ -41,7 +41,7 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frequencies:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QzR-wY-rrU">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Frequencies:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QzR-wY-rrU">
                                             <rect key="frame" x="116" y="66" width="99" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -64,6 +64,7 @@
                                     <outlet property="dosage" destination="dPT-sD-nw6" id="E9e-Hp-TOD"/>
                                     <outlet property="drugName" destination="EbK-EE-qa4" id="iUF-43-ZVY"/>
                                     <outlet property="frequency" destination="QzR-wY-rrU" id="P3H-ZE-F5L"/>
+                                    <segue destination="yCp-fJ-cTo" kind="show" id="RzA-LJ-x36"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -78,11 +79,30 @@
             </objects>
             <point key="canvasLocation" x="1695" y="0.0"/>
         </scene>
+        <!--Medication Detail View Controller-->
+        <scene sceneID="Bxs-Dq-3jQ">
+            <objects>
+                <viewController id="yCp-fJ-cTo" customClass="MedicationDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kSC-y1-Rol"/>
+                        <viewControllerLayoutGuide type="bottom" id="9kL-3G-ueg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ewW-6a-1hD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P5B-rb-YYL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2412" y="0.0"/>
+        </scene>
         <!--Meds-->
         <scene sceneID="mVv-Zx-cnB">
             <objects>
                 <navigationController storyboardIdentifier="NavController" title="Meds" id="IrS-ZQ-hLJ" customClass="NavController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Meds" id="hJJ-yc-TpU"/>
+                    <tabBarItem key="tabBarItem" title="Medications" image="Meds" id="Eq3-MF-w4H"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jZ4-K1-6Y9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -96,4 +116,7 @@
             <point key="canvasLocation" x="986" y="0.0"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Meds" width="22" height="22"/>
+    </resources>
 </document>
