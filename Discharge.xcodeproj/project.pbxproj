@@ -11,6 +11,7 @@
 		E409395E1C94706800519F90 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E409395C1C94706800519F90 /* LoginViewController.m */; };
 		E409395F1C94706800519F90 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E409395D1C94706800519F90 /* LoginViewController.xib */; };
 		E40939631C94728400519F90 /* Authorization.m in Sources */ = {isa = PBXBuildFile; fileRef = E40939621C94728400519F90 /* Authorization.m */; };
+		E409396B1C94768700519F90 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E409396A1C94768700519F90 /* User.m */; };
 		E4ACE98B1C946CE300C34510 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4ACE98A1C946CE300C34510 /* main.m */; };
 		E4ACE98E1C946CE300C34510 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4ACE98D1C946CE300C34510 /* AppDelegate.m */; };
 		E4ACE9911C946CE300C34510 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4ACE9901C946CE300C34510 /* FirstViewController.m */; };
@@ -29,6 +30,8 @@
 		E409395D1C94706800519F90 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		E40939611C94728400519F90 /* Authorization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Authorization.h; sourceTree = "<group>"; };
 		E40939621C94728400519F90 /* Authorization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Authorization.m; sourceTree = "<group>"; };
+		E40939691C94768700519F90 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		E409396A1C94768700519F90 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		E4ACE9861C946CE300C34510 /* Discharge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Discharge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4ACE98A1C946CE300C34510 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E4ACE98C1C946CE300C34510 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -78,10 +81,19 @@
 				E409395B1C94706800519F90 /* LoginViewController.h */,
 				E409395C1C94706800519F90 /* LoginViewController.m */,
 				E409395D1C94706800519F90 /* LoginViewController.xib */,
-				E40939611C94728400519F90 /* Authorization.h */,
-				E40939621C94728400519F90 /* Authorization.m */,
 			);
 			name = LoginView;
+			sourceTree = "<group>";
+		};
+		E40939681C94767200519F90 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				E40939611C94728400519F90 /* Authorization.h */,
+				E40939621C94728400519F90 /* Authorization.m */,
+				E40939691C94768700519F90 /* User.h */,
+				E409396A1C94768700519F90 /* User.m */,
+			);
+			name = User;
 			sourceTree = "<group>";
 		};
 		E4ACE97D1C946CE300C34510 = {
@@ -105,6 +117,7 @@
 		E4ACE9881C946CE300C34510 /* Discharge */ = {
 			isa = PBXGroup;
 			children = (
+				E40939681C94767200519F90 /* User */,
 				E40939601C94708800519F90 /* LoginView */,
 				E4ACE98C1C946CE300C34510 /* AppDelegate.h */,
 				E4ACE98D1C946CE300C34510 /* AppDelegate.m */,
@@ -252,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4ACE9941C946CE300C34510 /* SecondViewController.m in Sources */,
+				E409396B1C94768700519F90 /* User.m in Sources */,
 				E4ACE98E1C946CE300C34510 /* AppDelegate.m in Sources */,
 				E4ACE9911C946CE300C34510 /* FirstViewController.m in Sources */,
 				E4ACE98B1C946CE300C34510 /* main.m in Sources */,
