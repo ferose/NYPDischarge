@@ -13,5 +13,6 @@
 +(instancetype)currentUser;
 
 -(BOOL)isLoggedIn;
+-(NSString*)identification;
 
 @end
