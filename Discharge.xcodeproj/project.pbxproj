@@ -40,6 +40,8 @@
 		533102C67DA1047B4508F35C /* libPods-Discharge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Discharge.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A0DE5A91C949E1400559440 /* ContactNumbersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactNumbersViewController.h; sourceTree = "<group>"; };
 		9A0DE5AA1C949E1400559440 /* ContactNumbersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactNumbersViewController.m; sourceTree = "<group>"; };
+		9A0DE5AC1C94C06A00559440 /* MedicationDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedicationDetailViewController.h; sourceTree = "<group>"; };
+		9A0DE5AD1C94C06A00559440 /* MedicationDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedicationDetailViewController.m; sourceTree = "<group>"; };
 		E409395B1C94706800519F90 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		E409395C1C94706800519F90 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		E40939611C94728400519F90 /* Authorization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Authorization.h; sourceTree = "<group>"; };
@@ -174,6 +176,8 @@
 				E4ACE98D1C946CE300C34510 /* AppDelegate.m */,
 				9A0DE5A91C949E1400559440 /* ContactNumbersViewController.h */,
 				9A0DE5AA1C949E1400559440 /* ContactNumbersViewController.m */,
+				9A0DE5AC1C94C06A00559440 /* MedicationDetailViewController.h */,
+				9A0DE5AD1C94C06A00559440 /* MedicationDetailViewController.m */,
 				E4ACE9981C946CE300C34510 /* Assets.xcassets */,
 				E4ACE99A1C946CE300C34510 /* LaunchScreen.storyboard */,
 				E4ACE99D1C946CE300C34510 /* Info.plist */,
@@ -281,7 +285,7 @@
 				TargetAttributes = {
 					E4ACE9851C946CE300C34510 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = Z368FJ9ZFJ;
+						DevelopmentTeam = 788Q6NYZ88;
 					};
 				};
 			};
@@ -382,6 +386,7 @@
 				E4ACE98E1C946CE300C34510 /* AppDelegate.m in Sources */,
 				E4DECC5F1C94866C00162F1A /* NavController.m in Sources */,
 				514919B01C94AEF100DC6749 /* InfoTableViewController.m in Sources */,
+				9A0DE5AE1C94C06A00559440 /* MedicationDetailViewController.m in Sources */,
 				E4ACE98B1C946CE300C34510 /* main.m in Sources */,
 				E409395E1C94706800519F90 /* LoginViewController.m in Sources */,
 				E4DECC661C9487EF00162F1A /* MedsMasterTableViewController.m in Sources */,
@@ -503,7 +508,7 @@
 				INFOPLIST_FILE = Discharge/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = NYP.Discharge;
+				PRODUCT_BUNDLE_IDENTIFIER = NYP.Dischargek;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -518,7 +523,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Discharge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = NYP.Discharge;
+				PRODUCT_BUNDLE_IDENTIFIER = NYP.Dischargek;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

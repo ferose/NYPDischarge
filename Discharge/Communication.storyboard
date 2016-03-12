@@ -122,7 +122,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Us8-Yl-fen">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Us8-Yl-fen">
                                 <rect key="frame" x="16" y="80" width="568" height="157"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Milstein Hospital" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMt-xB-OXk">
@@ -131,7 +131,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1P-bE-vEP">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1P-bE-vEP">
                                         <rect key="frame" x="290" y="47" width="266" height="47"/>
                                         <color key="backgroundColor" red="0.23186105069999999" green="0.68684895830000003" blue="0.37146333510000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Patient Services">
@@ -141,7 +141,7 @@
                                             <action selector="callMilstein:" destination="iKC-jS-QJU" eventType="touchUpInside" id="Odi-Df-Qxb"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9J-7u-cyp">
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9J-7u-cyp">
                                         <rect key="frame" x="290" y="106" width="266" height="47"/>
                                         <color key="backgroundColor" red="0.23186105069999999" green="0.68684895830000003" blue="0.37146333510000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Food &amp; Nutrition Dept.">
@@ -151,7 +151,7 @@
                                             <action selector="callMilstein:" destination="iKC-jS-QJU" eventType="touchUpInside" id="5Kt-Ex-JPl"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" verticalCompressionResistancePriority="747" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rW-8E-GVY">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" verticalCompressionResistancePriority="747" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rW-8E-GVY">
                                         <rect key="frame" x="12" y="106" width="266" height="47"/>
                                         <color key="backgroundColor" red="0.23186105069999999" green="0.68684895830000003" blue="0.37146333510000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Social Work">
@@ -161,7 +161,7 @@
                                             <action selector="callMilstein:" destination="iKC-jS-QJU" eventType="touchUpInside" id="w8s-Nw-OdL"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQG-oG-4Y5">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQG-oG-4Y5">
                                         <rect key="frame" x="12" y="47" width="266" height="47"/>
                                         <color key="backgroundColor" red="0.23186105069999999" green="0.68684895830000003" blue="0.37146333510000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Main">
@@ -215,7 +215,7 @@
                                             <action selector="callMilstein:" destination="iKC-jS-QJU" eventType="touchUpInside" id="LNM-UP-cG4"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3n-Qq-0cP">
+                                    <button opaque="NO" tag="7" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3n-Qq-0cP">
                                         <rect key="frame" x="290" y="47" width="266" height="48"/>
                                         <color key="backgroundColor" red="0.23186105069999999" green="0.68684895830000003" blue="0.37146333510000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Patient Services">
@@ -235,7 +235,7 @@
                                             <action selector="callMilstein:" destination="iKC-jS-QJU" eventType="touchUpInside" id="750-Za-Kxa"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jeV-8V-MZX">
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jeV-8V-MZX">
                                         <rect key="frame" x="12" y="47" width="266" height="48"/>
                                         <color key="backgroundColor" red="0.23186105069999999" green="0.68684895830000003" blue="0.37146333510000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Main">
@@ -284,7 +284,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJT-hZ-j0m">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eJT-hZ-j0m">
                                 <rect key="frame" x="16" y="427" width="568" height="157"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MSCHONY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSp-vZ-T3d">
@@ -293,7 +293,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czU-j5-whO">
+                                    <button opaque="NO" tag="9" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czU-j5-whO">
                                         <rect key="frame" x="12" y="47" width="266" height="47"/>
                                         <color key="backgroundColor" red="0.23186105069999999" green="0.68684895830000003" blue="0.37146333510000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Main">
@@ -303,7 +303,7 @@
                                             <action selector="callMilstein:" destination="iKC-jS-QJU" eventType="touchUpInside" id="miT-Bz-Vtr"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="10" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGq-RP-BVI">
+                                    <button opaque="NO" tag="10" contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGq-RP-BVI">
                                         <rect key="frame" x="12" y="106" width="266" height="47"/>
                                         <color key="backgroundColor" red="0.23186105069999999" green="0.68684895830000003" blue="0.37146333510000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Social Work">
@@ -313,7 +313,7 @@
                                             <action selector="callMilstein:" destination="iKC-jS-QJU" eventType="touchUpInside" id="os6-xV-Vx9"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zL7-mo-Jwk">
+                                    <button opaque="NO" tag="12" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zL7-mo-Jwk">
                                         <rect key="frame" x="290" y="106" width="266" height="47"/>
                                         <color key="backgroundColor" red="0.23186105069999999" green="0.68684895830000003" blue="0.37146333510000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Food &amp; Nutrition Dept.">
@@ -323,7 +323,7 @@
                                             <action selector="callMilstein:" destination="iKC-jS-QJU" eventType="touchUpInside" id="hev-M0-KMJ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcr-Gv-hxf">
+                                    <button opaque="NO" tag="11" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcr-Gv-hxf">
                                         <rect key="frame" x="290" y="47" width="266" height="47"/>
                                         <color key="backgroundColor" red="0.23186105069999999" green="0.68684895830000003" blue="0.37146333510000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Patient Services">
@@ -383,6 +383,8 @@
         <scene sceneID="y8h-Zp-vJG">
             <objects>
                 <navigationController storyboardIdentifier="NavController" title="Comm" id="TCp-bp-n1w" customClass="NavController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Appointments" image="Notifications" id="lNa-dL-bLm"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="C2q-P5-lBR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -396,4 +398,7 @@
             <point key="canvasLocation" x="-84" y="408"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Notifications" width="22" height="22"/>
+    </resources>
 </document>
