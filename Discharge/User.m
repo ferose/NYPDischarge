@@ -23,6 +23,9 @@
 
 -(BOOL)isLoggedIn
 {
+    if([ [NSUserDefaults standardUserDefaults] objectForKey:@"id"] != nil){
+        return YES;
+    }
     return NO;
 }
 
