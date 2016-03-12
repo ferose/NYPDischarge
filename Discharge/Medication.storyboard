@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -79,10 +79,10 @@
             </objects>
             <point key="canvasLocation" x="1695" y="0.0"/>
         </scene>
-        <!--Medication Detail View Controller-->
+        <!--MedicationDV View Controller-->
         <scene sceneID="Bxs-Dq-3jQ">
             <objects>
-                <viewController id="yCp-fJ-cTo" customClass="MedicationDetailViewController" sceneMemberID="viewController">
+                <viewController id="yCp-fJ-cTo" customClass="MedicationDVViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kSC-y1-Rol"/>
                         <viewControllerLayoutGuide type="bottom" id="9kL-3G-ueg"/>
@@ -91,13 +91,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="04V-zU-yPP">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="04V-zU-yPP">
                                 <rect key="frame" x="0.0" y="64" width="600" height="268"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uAi-s8-imq">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uAi-s8-imq">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="134"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Med" translatesAutoresizingMaskIntoConstraints="NO" id="shR-Yf-3AT">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Med" translatesAutoresizingMaskIntoConstraints="NO" id="shR-Yf-3AT">
                                                 <rect key="frame" x="4" y="4" width="150" height="126"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="DxA-cd-7ao"/>
@@ -106,19 +106,19 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pill Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Zr-MJ-EJM">
                                                 <rect key="frame" x="162" y="8" width="72" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dosage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ve-fr-VAb">
                                                 <rect key="frame" x="162" y="37" width="59" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frequency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybw-wV-Jbf">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Frequency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybw-wV-Jbf">
                                                 <rect key="frame" x="162" y="66" width="81" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -135,16 +135,16 @@
                                             <constraint firstAttribute="bottom" secondItem="shR-Yf-3AT" secondAttribute="bottom" constant="4" id="lxx-JF-GE2"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="srU-hN-kiT">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="srU-hN-kiT">
                                         <rect key="frame" x="0.0" y="134" width="600" height="134"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wBH-dG-nx7">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Notes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wBH-dG-nx7">
                                                 <rect key="frame" x="8" y="56" width="51" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Notes go here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="W8z-uG-FXs">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="Notes go here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="W8z-uG-FXs">
                                                 <rect key="frame" x="67" y="16" width="525" height="102"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -174,7 +174,7 @@
                                     <constraint firstItem="uAi-s8-imq" firstAttribute="top" secondItem="04V-zU-yPP" secondAttribute="top" id="za8-ou-WY3"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="20N-dA-Anf">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="20N-dA-Anf">
                                 <rect key="frame" x="0.0" y="332" width="600" height="268"/>
                                 <color key="backgroundColor" red="0.23186105069999999" green="0.68684895830000003" blue="0.37146333510000001" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -191,6 +191,12 @@
                             <constraint firstItem="20N-dA-Anf" firstAttribute="leading" secondItem="ewW-6a-1hD" secondAttribute="leading" id="zbh-TI-G1e"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dosage" destination="6Ve-fr-VAb" id="gFG-T3-6Vk"/>
+                        <outlet property="drugImage" destination="shR-Yf-3AT" id="Jdc-mg-Ose"/>
+                        <outlet property="drugName" destination="8Zr-MJ-EJM" id="FzU-eJ-HNX"/>
+                        <outlet property="frequency" destination="ybw-wV-Jbf" id="WY6-x4-Wse"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P5B-rb-YYL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -216,6 +222,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Med" width="60" height="60"/>
         <image name="Meds" width="22" height="22"/>
     </resources>
 </document>
