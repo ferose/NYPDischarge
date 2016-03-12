@@ -21,4 +21,9 @@
     return shared;
 }
 
+-(BOOL)isLoggedIn
+{
+    return NO;
+}
+
 @end

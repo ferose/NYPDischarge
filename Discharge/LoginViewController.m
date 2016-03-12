@@ -10,9 +10,22 @@
 
 @interface LoginViewController ()
 
+@property (nonatomic) UIViewController *root;
+
 @end
 
 @implementation LoginViewController
+
++ (void)launchLogin
+{
+    UIWindow *window = [[UIApplication sharedApplication].delegate window];
+    UIViewController *root = window.rootViewController;
+    
+    LoginViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([LoginViewController class])];
+    vc.root = root;
+    
+    window.rootViewController = vc;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,5 +46,13 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)didTapStart:(id)sender {
+    UIWindow *window = [[UIApplication sharedApplication].delegate window];
+    
+    window.rootViewController = self.root;
+    
+    
+}
 
 @end

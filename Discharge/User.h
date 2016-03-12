@@ -12,4 +12,6 @@
 
 +(instancetype)currentUser;
 
+-(BOOL)isLoggedIn;
+
 @end

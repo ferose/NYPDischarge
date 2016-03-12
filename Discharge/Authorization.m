@@ -7,6 +7,8 @@
 //
 
 #import "Authorization.h"
+#import "User.h"
+#import "LoginViewController.h"
 
 @implementation Authorization
 
@@ -23,7 +25,9 @@
 
 -(void)appStart
 {
-    
+    if (![[User currentUser] isLoggedIn]) {
+        [LoginViewController launchLogin];
+    }
 }
 
 @end

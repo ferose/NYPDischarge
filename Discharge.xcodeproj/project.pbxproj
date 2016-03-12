@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		2DA891B20AAAAB09C5C2FF01 /* libPods-Discharge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 533102C67DA1047B4508F35C /* libPods-Discharge.a */; };
 		E409395E1C94706800519F90 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E409395C1C94706800519F90 /* LoginViewController.m */; };
-		E409395F1C94706800519F90 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E409395D1C94706800519F90 /* LoginViewController.xib */; };
 		E40939631C94728400519F90 /* Authorization.m in Sources */ = {isa = PBXBuildFile; fileRef = E40939621C94728400519F90 /* Authorization.m */; };
 		E409396B1C94768700519F90 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E409396A1C94768700519F90 /* User.m */; };
 		E4ACE98B1C946CE300C34510 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4ACE98A1C946CE300C34510 /* main.m */; };
@@ -27,7 +26,6 @@
 		533102C67DA1047B4508F35C /* libPods-Discharge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Discharge.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E409395B1C94706800519F90 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		E409395C1C94706800519F90 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		E409395D1C94706800519F90 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		E40939611C94728400519F90 /* Authorization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Authorization.h; sourceTree = "<group>"; };
 		E40939621C94728400519F90 /* Authorization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Authorization.m; sourceTree = "<group>"; };
 		E40939691C94768700519F90 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -80,7 +78,6 @@
 			children = (
 				E409395B1C94706800519F90 /* LoginViewController.h */,
 				E409395C1C94706800519F90 /* LoginViewController.m */,
-				E409395D1C94706800519F90 /* LoginViewController.xib */,
 			);
 			name = LoginView;
 			sourceTree = "<group>";
@@ -202,7 +199,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E409395F1C94706800519F90 /* LoginViewController.xib in Resources */,
 				E4ACE99C1C946CE300C34510 /* LaunchScreen.storyboard in Resources */,
 				E4ACE9991C946CE300C34510 /* Assets.xcassets in Resources */,
 				E4ACE9971C946CE300C34510 /* Main.storyboard in Resources */,
