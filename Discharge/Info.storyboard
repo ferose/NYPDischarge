@@ -54,6 +54,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Bandage" width="45" height="45"/>
+        <image name="Bandage" width="22" height="22"/>
     </resources>
 </document>
