@@ -8,7 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		2DA891B20AAAAB09C5C2FF01 /* libPods-Discharge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 533102C67DA1047B4508F35C /* libPods-Discharge.a */; };
+<<<<<<< HEAD
 		9A0DE5AB1C949E1400559440 /* ContactNumbersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DE5AA1C949E1400559440 /* ContactNumbersViewController.m */; };
+=======
+		514919B01C94AEF100DC6749 /* InfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 514919AF1C94AEF100DC6749 /* InfoTableViewController.m */; };
+>>>>>>> 415e7476583b3b78031acd4446e16a77c4f1f072
 		E409395E1C94706800519F90 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E409395C1C94706800519F90 /* LoginViewController.m */; };
 		E40939631C94728400519F90 /* Authorization.m in Sources */ = {isa = PBXBuildFile; fileRef = E40939621C94728400519F90 /* Authorization.m */; };
 		E409396B1C94768700519F90 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E409396A1C94768700519F90 /* User.m */; };
@@ -25,11 +29,14 @@
 		E4DECC6F1C94996F00162F1A /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4DECC6E1C94996F00162F1A /* Info.storyboard */; };
 		E4DECC721C949A7300162F1A /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DECC711C949A7300162F1A /* MainTabBarController.m */; };
 		E4DECC741C949CCF00162F1A /* Question.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4DECC731C949CCF00162F1A /* Question.storyboard */; };
+		E4DECC781C94A94500162F1A /* Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DECC771C94A94500162F1A /* Networking.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		17A21B2701648140CFAC519F /* Pods-Discharge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Discharge.release.xcconfig"; path = "Pods/Target Support Files/Pods-Discharge/Pods-Discharge.release.xcconfig"; sourceTree = "<group>"; };
 		36E3736C93AB19A587C728FC /* Pods-Discharge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Discharge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Discharge/Pods-Discharge.debug.xcconfig"; sourceTree = "<group>"; };
+		514919AE1C94AEF100DC6749 /* InfoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoTableViewController.h; sourceTree = "<group>"; };
+		514919AF1C94AEF100DC6749 /* InfoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoTableViewController.m; sourceTree = "<group>"; };
 		533102C67DA1047B4508F35C /* libPods-Discharge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Discharge.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A0DE5A91C949E1400559440 /* ContactNumbersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactNumbersViewController.h; sourceTree = "<group>"; };
 		9A0DE5AA1C949E1400559440 /* ContactNumbersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactNumbersViewController.m; sourceTree = "<group>"; };
@@ -59,6 +66,8 @@
 		E4DECC701C949A7300162F1A /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		E4DECC711C949A7300162F1A /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
 		E4DECC731C949CCF00162F1A /* Question.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Question.storyboard; sourceTree = "<group>"; };
+		E4DECC761C94A94500162F1A /* Networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
+		E4DECC771C94A94500162F1A /* Networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Networking.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +82,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		514919B11C94AF1C00DC6749 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				514919AE1C94AEF100DC6749 /* InfoTableViewController.h */,
+				514919AF1C94AEF100DC6749 /* InfoTableViewController.m */,
+			);
+			name = Info;
+			sourceTree = "<group>";
+		};
 		5851DFACBB066E220B965E84 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +187,7 @@
 		E4DECC591C94860D00162F1A /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
+				514919B11C94AF1C00DC6749 /* Info */,
 				E4DECC601C9486E200162F1A /* Meds */,
 				E4DECC5D1C94866C00162F1A /* NavController.h */,
 				E4DECC5E1C94866C00162F1A /* NavController.m */,
@@ -190,6 +209,8 @@
 		E4DECC671C9496A700162F1A /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				E4DECC761C94A94500162F1A /* Networking.h */,
+				E4DECC771C94A94500162F1A /* Networking.m */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -334,10 +355,12 @@
 			files = (
 				9A0DE5AB1C949E1400559440 /* ContactNumbersViewController.m in Sources */,
 				E409396B1C94768700519F90 /* User.m in Sources */,
+				E4DECC781C94A94500162F1A /* Networking.m in Sources */,
 				E4DECC581C947F1B00162F1A /* UIView+LayoutExtension.m in Sources */,
 				E4DECC721C949A7300162F1A /* MainTabBarController.m in Sources */,
 				E4ACE98E1C946CE300C34510 /* AppDelegate.m in Sources */,
 				E4DECC5F1C94866C00162F1A /* NavController.m in Sources */,
+				514919B01C94AEF100DC6749 /* InfoTableViewController.m in Sources */,
 				E4ACE98B1C946CE300C34510 /* main.m in Sources */,
 				E409395E1C94706800519F90 /* LoginViewController.m in Sources */,
 				E4DECC661C9487EF00162F1A /* MedsMasterTableViewController.m in Sources */,
