@@ -14,6 +14,7 @@
 		E40939631C94728400519F90 /* Authorization.m in Sources */ = {isa = PBXBuildFile; fileRef = E40939621C94728400519F90 /* Authorization.m */; };
 		E409396B1C94768700519F90 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E409396A1C94768700519F90 /* User.m */; };
 		E43DCEA01C94C82D0060D5F1 /* CommunicationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E43DCE9F1C94C82D0060D5F1 /* CommunicationTableViewController.m */; };
+		E43DCEA41C94D4400060D5F1 /* QuestionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E43DCEA31C94D4400060D5F1 /* QuestionTableViewController.m */; };
 		E4ACE98B1C946CE300C34510 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4ACE98A1C946CE300C34510 /* main.m */; };
 		E4ACE98E1C946CE300C34510 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4ACE98D1C946CE300C34510 /* AppDelegate.m */; };
 		E4ACE9971C946CE300C34510 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4ACE9951C946CE300C34510 /* Main.storyboard */; };
@@ -49,6 +50,8 @@
 		E409396A1C94768700519F90 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		E43DCE9E1C94C82D0060D5F1 /* CommunicationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommunicationTableViewController.h; sourceTree = "<group>"; };
 		E43DCE9F1C94C82D0060D5F1 /* CommunicationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommunicationTableViewController.m; sourceTree = "<group>"; };
+		E43DCEA21C94D4400060D5F1 /* QuestionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionTableViewController.h; sourceTree = "<group>"; };
+		E43DCEA31C94D4400060D5F1 /* QuestionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionTableViewController.m; sourceTree = "<group>"; };
 		E4ACE9861C946CE300C34510 /* Discharge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Discharge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4ACE98A1C946CE300C34510 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E4ACE98C1C946CE300C34510 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -146,6 +149,15 @@
 			name = Communication;
 			sourceTree = "<group>";
 		};
+		E43DCEA11C94D4220060D5F1 /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				E43DCEA21C94D4400060D5F1 /* QuestionTableViewController.h */,
+				E43DCEA31C94D4400060D5F1 /* QuestionTableViewController.m */,
+			);
+			name = Question;
+			sourceTree = "<group>";
+		};
 		E4ACE97D1C946CE300C34510 = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +217,7 @@
 		E4DECC591C94860D00162F1A /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
+				E43DCEA11C94D4220060D5F1 /* Question */,
 				E43DCE9D1C94C79A0060D5F1 /* Communication */,
 				514919B11C94AF1C00DC6749 /* Info */,
 				E4DECC601C9486E200162F1A /* Meds */,
@@ -378,6 +391,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E43DCEA41C94D4400060D5F1 /* QuestionTableViewController.m in Sources */,
 				9A0DE5AB1C949E1400559440 /* ContactNumbersViewController.m in Sources */,
 				E409396B1C94768700519F90 /* User.m in Sources */,
 				E4DECC781C94A94500162F1A /* Networking.m in Sources */,
