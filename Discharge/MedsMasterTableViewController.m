@@ -25,6 +25,8 @@
     
     self.tableView.estimatedRowHeight = 121;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
+    self.tableView.tableFooterView = [UIView new];
 }
 
 - (void)didReceiveMemoryWarning {
