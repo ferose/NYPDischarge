@@ -373,7 +373,6 @@
 				E4ACE98E1C946CE300C34510 /* AppDelegate.m in Sources */,
 				E4DECC5F1C94866C00162F1A /* NavController.m in Sources */,
 				514919B01C94AEF100DC6749 /* InfoTableViewController.m in Sources */,
-				9A0DE5AE1C94C06A00559440 /* MedicationDetailViewController.m in Sources */,
 				E4ACE98B1C946CE300C34510 /* main.m in Sources */,
 				E409395E1C94706800519F90 /* LoginViewController.m in Sources */,
 				E4DECC661C9487EF00162F1A /* MedsMasterTableViewController.m in Sources */,
