@@ -72,7 +72,7 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		E40939601C94708800519F90 /* Login */ = {
+		E40939601C94708800519F90 /* LoginView */ = {
 			isa = PBXGroup;
 			children = (
 				E409395B1C94706800519F90 /* LoginViewController.h */,
@@ -81,7 +81,7 @@
 				E40939611C94728400519F90 /* Authorization.h */,
 				E40939621C94728400519F90 /* Authorization.m */,
 			);
-			name = Login;
+			name = LoginView;
 			sourceTree = "<group>";
 		};
 		E4ACE97D1C946CE300C34510 = {
@@ -105,7 +105,7 @@
 		E4ACE9881C946CE300C34510 /* Discharge */ = {
 			isa = PBXGroup;
 			children = (
-				E40939601C94708800519F90 /* Login */,
+				E40939601C94708800519F90 /* LoginView */,
 				E4ACE98C1C946CE300C34510 /* AppDelegate.h */,
 				E4ACE98D1C946CE300C34510 /* AppDelegate.m */,
 				E4ACE98F1C946CE300C34510 /* FirstViewController.h */,

@@ -10,4 +10,8 @@
 
 @interface Authorization : NSObject
 
++(instancetype)shared;
+
+-(void)appStart;
+
 @end

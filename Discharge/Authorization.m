@@ -10,6 +10,20 @@
 
 @implementation Authorization
 
++(instancetype)shared
+{
+    static Authorization *shared = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        shared = [[self alloc] init];
+    });
+    
+    return shared;
+}
 
+-(void)appStart
+{
+    
+}
 
 @end
