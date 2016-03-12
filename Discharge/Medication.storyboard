@@ -216,6 +216,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Med" width="60" height="60"/>
+        <image name="Meds" width="22" height="22"/>
     </resources>
 </document>
