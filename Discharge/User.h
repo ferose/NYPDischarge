@@ -12,6 +12,8 @@
 
 +(instancetype)currentUser;
 
+@property (nonatomic) NSString *identification;
+
 -(BOOL)isLoggedIn;
 
 @end

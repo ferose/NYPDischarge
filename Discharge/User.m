@@ -23,10 +23,17 @@
 
 -(BOOL)isLoggedIn
 {
-    if([ [NSUserDefaults standardUserDefaults] objectForKey:@"id"] != nil){
-        return YES;
-    }
-    return NO;
+    return self.identification;
+}
+
+-(NSString*)identification
+{
+    return [[NSUserDefaults standardUserDefaults] objectForKey:@"id"];
+}
+
+-(void)setIdentification:(NSString *)identification
+{
+    [[NSUserDefaults standardUserDefaults] setObject:identification forKey:@"id"];
 }
 
 @end
