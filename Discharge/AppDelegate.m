@@ -20,6 +20,32 @@
     // Override point for customization after application launch.
     
     [[Authorization shared] appStart];
+    
+/* 
+NYP Hospital COLORS:
+red: 223, 74, 50
+light grey: 187, 187, 187
+dark grey: 122, 121, 121
+black:
+ 
+*/
+    // remove translucent layer on navigation items
+    [UINavigationBar appearance].translucent = NO;
+    [UITabBar appearance].translucent = NO;
+    
+    // change top navigation bar button color
+    [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
+    
+    // change navigation bar background color
+    [UINavigationBar appearance].barTintColor = [UIColor colorWithRed:223/256.0 green:74/256.0 blue:50/256.0 alpha:1.0];
+    
+
+    
+    
+    // tab bar controller background
+//    UINavigationController *nav = (UINavigationController *)self.window.rootViewController;
+//    UITabBarController *bc = nav.viewControllers[0];
+//    bc.tabBar.barTintColor = [UIColor colorWithRed:122/256.0 green:121/256.0 blue:121/256.0 alpha:1.0];
 
     
     return YES;

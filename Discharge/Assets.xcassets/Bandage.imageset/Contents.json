@@ -2,12 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Bandage@.75x.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Bandage @1x.png",
+      "filename" : "Bandage@.75x.png",
       "scale" : "2x"
     },
     {
