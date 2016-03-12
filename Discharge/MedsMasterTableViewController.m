@@ -6,9 +6,17 @@
 //  Copyright © 2016 NYP. All rights reserved.
 //
 
+//https://navhealth.herokuapp.com/api/fhir/MedicationOrder?patient=
+
 #import "MedsMasterTableViewController.h"
+#import <AFNetworking/AFNetworking.h>
+#import "MedTableViewCell.h"
+#import "Medication.h"
 
 @interface MedsMasterTableViewController ()
+
+@property (nonatomic) AFHTTPSessionManager *manager;
+@property (nonatomic) NSMutableArray *medications;
 
 @end
 
@@ -17,21 +25,82 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
     self.tableView.estimatedRowHeight = 121;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     
     self.tableView.tableFooterView = [UIView new];
+    self.manager = [[AFHTTPSessionManager alloc] init];
+    self.manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    self.medications = [[NSMutableArray alloc] init];
+    [self populateTableView];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) populateTableView{
+    [self.medications removeAllObjects];
+    NSString * url = [[NSString stringWithFormat:@"https://navhealth.herokuapp.com/api/fhir/MedicationOrder?patient=%@", [[NSUserDefaults standardUserDefaults] objectForKey:@"id"]] stringByAddingPercentEscapesUsingEncoding:
+                      NSASCIIStringEncoding];
+    
+    [self.manager GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSError *error;
+        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:&error];
+        if ([[json objectForKey:@"entry"] count] > 0) {
+            for (NSDictionary* med in [json objectForKey:@"entry"]) {
+                Medication *medication = [[Medication alloc] init];
+                
+                
+                
+                NSDictionary * dosageInstruction = [[[med objectForKey:@"resource"] objectForKey:@"dosageInstruction"] firstObject];
+                NSDictionary * repeat = [[dosageInstruction objectForKey:@"timing"] objectForKey:@"repeat"];
+                NSDictionary * doseQuantity = [dosageInstruction objectForKey:@"doseQuantity"];
+                
+                NSString * dosage = [NSString stringWithFormat:@"%@%@", [doseQuantity objectForKey:@"value"], [doseQuantity objectForKey:@"unit" ]];
+                NSString * frequency = [NSString stringWithFormat:@"%@ %@", [repeat objectForKey:@"frequency"], [repeat objectForKey:@"periodUnits" ]];
+                medication.dosage = dosage;
+                medication.frequency = frequency;
+                
+                NSString *medURL = [[[med objectForKey:@"resource"] objectForKey:@"medicationReference"] objectForKey:@"reference"];
+                
+                NSString *newURL = [NSString stringWithFormat:@"https://navhealth.herokuapp.com/api/fhir/%@", medURL];
+                [self.manager GET:newURL parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+                    NSLog(@"progress");
+                } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                    NSError *error;
+                    NSDictionary *medData = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:&error];
+                    NSString *drugName = [[[[medData objectForKey:@"code"] objectForKey:@"coding"] firstObject] objectForKey:@"display"];
+                    NSString *drugName2;
+                    
+                    
+                    NSScanner *scanner = [NSScanner scannerWithString:drugName];
+                    NSCharacterSet *numbers = [NSCharacterSet characterSetWithCharactersInString:@"0123456789"];
+                    
+                    // Throw away characters before the first number.
+                    [scanner scanUpToCharactersFromSet:numbers intoString:&drugName2];
+                    
+                    
+                    medication.name = drugName2;
+
+                    [self.medications addObject:medication];
+                    
+                    [self.tableView reloadData];
+                    
+                    
+                } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                    NSLog(@"fail");
+                }];
+               
+            }
+            
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"%@", error);
+        
+    }];
+
 }
 
 #pragma mark - Table view data source
@@ -41,12 +110,15 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    return self.medications.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MedCell" forIndexPath:indexPath];
-    
+    MedTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MedCell" forIndexPath:indexPath];
+    Medication * med =[self.medications objectAtIndex:indexPath.row];
+    cell.drugName.text = med.name;
+    cell.dosage.text = med.dosage;
+    cell.frequency.text = med.frequency;
     // Configure the cell...
     
     return cell;
