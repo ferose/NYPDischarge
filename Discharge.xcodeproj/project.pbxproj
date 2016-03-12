@@ -13,12 +13,11 @@
 		E409396B1C94768700519F90 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E409396A1C94768700519F90 /* User.m */; };
 		E4ACE98B1C946CE300C34510 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4ACE98A1C946CE300C34510 /* main.m */; };
 		E4ACE98E1C946CE300C34510 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4ACE98D1C946CE300C34510 /* AppDelegate.m */; };
-		E4ACE9911C946CE300C34510 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4ACE9901C946CE300C34510 /* FirstViewController.m */; };
-		E4ACE9941C946CE300C34510 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4ACE9931C946CE300C34510 /* SecondViewController.m */; };
 		E4ACE9971C946CE300C34510 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4ACE9951C946CE300C34510 /* Main.storyboard */; };
 		E4ACE9991C946CE300C34510 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4ACE9981C946CE300C34510 /* Assets.xcassets */; };
 		E4ACE99C1C946CE300C34510 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4ACE99A1C946CE300C34510 /* LaunchScreen.storyboard */; };
 		E4DECC581C947F1B00162F1A /* UIView+LayoutExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DECC571C947F1B00162F1A /* UIView+LayoutExtension.m */; };
+		E4DECC5F1C94866C00162F1A /* NavController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DECC5E1C94866C00162F1A /* NavController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,16 +34,14 @@
 		E4ACE98A1C946CE300C34510 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E4ACE98C1C946CE300C34510 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E4ACE98D1C946CE300C34510 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E4ACE98F1C946CE300C34510 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		E4ACE9901C946CE300C34510 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		E4ACE9921C946CE300C34510 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		E4ACE9931C946CE300C34510 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		E4ACE9961C946CE300C34510 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E4ACE9981C946CE300C34510 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4ACE99B1C946CE300C34510 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4ACE99D1C946CE300C34510 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4DECC561C947F1B00162F1A /* UIView+LayoutExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LayoutExtension.h"; sourceTree = "<group>"; };
 		E4DECC571C947F1B00162F1A /* UIView+LayoutExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LayoutExtension.m"; sourceTree = "<group>"; };
+		E4DECC5D1C94866C00162F1A /* NavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavController.h; sourceTree = "<group>"; };
+		E4DECC5E1C94866C00162F1A /* NavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,15 +114,12 @@
 		E4ACE9881C946CE300C34510 /* Discharge */ = {
 			isa = PBXGroup;
 			children = (
+				E4DECC591C94860D00162F1A /* Tabs */,
 				E4DECC551C947F0600162F1A /* Categories */,
 				E40939681C94767200519F90 /* User */,
 				E40939601C94708800519F90 /* LoginView */,
 				E4ACE98C1C946CE300C34510 /* AppDelegate.h */,
 				E4ACE98D1C946CE300C34510 /* AppDelegate.m */,
-				E4ACE98F1C946CE300C34510 /* FirstViewController.h */,
-				E4ACE9901C946CE300C34510 /* FirstViewController.m */,
-				E4ACE9921C946CE300C34510 /* SecondViewController.h */,
-				E4ACE9931C946CE300C34510 /* SecondViewController.m */,
 				E4ACE9951C946CE300C34510 /* Main.storyboard */,
 				E4ACE9981C946CE300C34510 /* Assets.xcassets */,
 				E4ACE99A1C946CE300C34510 /* LaunchScreen.storyboard */,
@@ -150,6 +144,15 @@
 				E4DECC571C947F1B00162F1A /* UIView+LayoutExtension.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		E4DECC591C94860D00162F1A /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				E4DECC5D1C94866C00162F1A /* NavController.h */,
+				E4DECC5E1C94866C00162F1A /* NavController.m */,
+			);
+			name = Tabs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,11 +276,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4ACE9941C946CE300C34510 /* SecondViewController.m in Sources */,
 				E409396B1C94768700519F90 /* User.m in Sources */,
 				E4DECC581C947F1B00162F1A /* UIView+LayoutExtension.m in Sources */,
 				E4ACE98E1C946CE300C34510 /* AppDelegate.m in Sources */,
-				E4ACE9911C946CE300C34510 /* FirstViewController.m in Sources */,
+				E4DECC5F1C94866C00162F1A /* NavController.m in Sources */,
 				E4ACE98B1C946CE300C34510 /* main.m in Sources */,
 				E409395E1C94706800519F90 /* LoginViewController.m in Sources */,
 				E40939631C94728400519F90 /* Authorization.m in Sources */,

@@ -93,7 +93,7 @@
             </objects>
             <point key="canvasLocation" x="1695" y="-803"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Medication-->
         <scene sceneID="vVY-vd-lgm">
             <objects>
                 <tableViewController id="wQb-mk-rgc" sceneMemberID="viewController">
@@ -116,7 +116,7 @@
                             <outlet property="delegate" destination="wQb-mk-rgc" id="j4m-Hn-Tfp"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="JSj-WQ-Jfb"/>
+                    <navigationItem key="navigationItem" title="Medication" id="JSj-WQ-Jfb"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JlU-ct-F05" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -154,7 +154,7 @@
         <!--Item-->
         <scene sceneID="lTQ-Dp-Kjx">
             <objects>
-                <navigationController id="SQH-d6-GVF" sceneMemberID="viewController">
+                <navigationController id="SQH-d6-GVF" customClass="NavController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="xKR-Gg-hOg"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WIS-op-FFJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -171,7 +171,7 @@
         <!--Meds-->
         <scene sceneID="JOQ-XQ-l7F">
             <objects>
-                <navigationController title="Meds" id="LCB-vL-AdU" sceneMemberID="viewController">
+                <navigationController title="Meds" id="LCB-vL-AdU" customClass="NavController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Meds" id="j5H-o4-8d0"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Npa-nq-Wa0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -188,7 +188,7 @@
         <!--Item-->
         <scene sceneID="cxx-TA-5jl">
             <objects>
-                <navigationController id="Wtg-qM-djO" sceneMemberID="viewController">
+                <navigationController id="Wtg-qM-djO" customClass="NavController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Wyy-r3-Pe7"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9dC-2Z-qU0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

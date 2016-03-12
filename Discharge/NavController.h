@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  NavController.h
 //  Discharge
 //
 //  Created by Ferose Babu on 3/12/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
-
+@interface NavController : UINavigationController
 
 @end
-
