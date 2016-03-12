@@ -101,6 +101,8 @@
 			children = (
 				E40939691C94768700519F90 /* User.h */,
 				E409396A1C94768700519F90 /* User.m */,
+				E40939611C94728400519F90 /* Authorization.h */,
+				E40939621C94728400519F90 /* Authorization.m */,
 			);
 			name = User;
 			sourceTree = "<group>";
@@ -183,8 +185,6 @@
 		E4DECC671C9496A700162F1A /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				E40939611C94728400519F90 /* Authorization.h */,
-				E40939621C94728400519F90 /* Authorization.m */,
 			);
 			name = Networking;
 			sourceTree = "<group>";

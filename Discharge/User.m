@@ -29,4 +29,9 @@
     return NO;
 }
 
+-(NSString*)identification
+{
+    return [[NSUserDefaults standardUserDefaults] objectForKey:@"id"];
+}
+
 @end
