@@ -79,10 +79,10 @@
             </objects>
             <point key="canvasLocation" x="1695" y="0.0"/>
         </scene>
-        <!--Medication Detail View Controller-->
+        <!--MedicationDV View Controller-->
         <scene sceneID="Bxs-Dq-3jQ">
             <objects>
-                <viewController id="yCp-fJ-cTo" customClass="MedicationDetailViewController" sceneMemberID="viewController">
+                <viewController id="yCp-fJ-cTo" customClass="MedicationDVViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kSC-y1-Rol"/>
                         <viewControllerLayoutGuide type="bottom" id="9kL-3G-ueg"/>
@@ -106,19 +106,19 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pill Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Zr-MJ-EJM">
                                                 <rect key="frame" x="162" y="8" width="72" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dosage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ve-fr-VAb">
                                                 <rect key="frame" x="162" y="37" width="59" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frequency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybw-wV-Jbf">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Frequency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybw-wV-Jbf">
                                                 <rect key="frame" x="162" y="66" width="81" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -247,6 +247,12 @@
                             <constraint firstItem="20N-dA-Anf" firstAttribute="leading" secondItem="ewW-6a-1hD" secondAttribute="leading" id="zbh-TI-G1e"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dosage" destination="6Ve-fr-VAb" id="gFG-T3-6Vk"/>
+                        <outlet property="drugImage" destination="shR-Yf-3AT" id="Jdc-mg-Ose"/>
+                        <outlet property="drugName" destination="8Zr-MJ-EJM" id="FzU-eJ-HNX"/>
+                        <outlet property="frequency" destination="ybw-wV-Jbf" id="WY6-x4-Wse"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P5B-rb-YYL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
