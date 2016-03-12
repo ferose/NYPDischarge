@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "UIView+LayoutExtension.h"
 
 @interface LoginViewController ()
 
@@ -50,9 +51,36 @@
 - (IBAction)didTapStart:(id)sender {
     UIWindow *window = [[UIApplication sharedApplication].delegate window];
     
+    UIView *introSnapshot = [[UIScreen mainScreen] snapshotViewAfterScreenUpdates:NO];
     window.rootViewController = self.root;
     
+    UIView *homeSnapshot = [self.root.view snapshotViewAfterScreenUpdates:YES];
+    UIView *blackView = [[UIView alloc] initWithFrame:homeSnapshot.bounds];
+    blackView.backgroundColor = [UIColor blackColor];
     
+    
+    [self.root.view addSubview:blackView];
+    [self.root.view addSubview:homeSnapshot];
+    [self.root.view addSubview:introSnapshot];
+    
+    introSnapshot.layer.shadowColor = [UIColor blackColor].CGColor;
+    introSnapshot.layer.shadowOffset = CGSizeMake(0, 0);
+    introSnapshot.layer.shadowOpacity = 0.5;
+    introSnapshot.layer.shadowRadius = 10.0;
+    
+    CGFloat margin = 20;
+    homeSnapshot.alpha = 0;
+    homeSnapshot.frame = CGRectMake(margin, margin, homeSnapshot.width-2*margin, homeSnapshot.height-margin);
+    
+    [UIView animateWithDuration:0.35f delay:0.0f options:UIViewAnimationOptionCurveEaseOut animations:^{
+        introSnapshot.y += introSnapshot.height;
+        homeSnapshot.frame = blackView.bounds;
+        homeSnapshot.alpha = 1;
+    } completion:^(BOOL finished) {
+        [introSnapshot removeFromSuperview];
+        [blackView removeFromSuperview];
+        [homeSnapshot removeFromSuperview];
+    }];
 }
 
 @end

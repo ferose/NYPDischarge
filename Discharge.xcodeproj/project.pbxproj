@@ -18,6 +18,7 @@
 		E4ACE9971C946CE300C34510 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4ACE9951C946CE300C34510 /* Main.storyboard */; };
 		E4ACE9991C946CE300C34510 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4ACE9981C946CE300C34510 /* Assets.xcassets */; };
 		E4ACE99C1C946CE300C34510 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4ACE99A1C946CE300C34510 /* LaunchScreen.storyboard */; };
+		E4DECC581C947F1B00162F1A /* UIView+LayoutExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DECC571C947F1B00162F1A /* UIView+LayoutExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,8 @@
 		E4ACE9981C946CE300C34510 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4ACE99B1C946CE300C34510 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4ACE99D1C946CE300C34510 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4DECC561C947F1B00162F1A /* UIView+LayoutExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LayoutExtension.h"; sourceTree = "<group>"; };
+		E4DECC571C947F1B00162F1A /* UIView+LayoutExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LayoutExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,7 @@
 		E4ACE9881C946CE300C34510 /* Discharge */ = {
 			isa = PBXGroup;
 			children = (
+				E4DECC551C947F0600162F1A /* Categories */,
 				E40939681C94767200519F90 /* User */,
 				E40939601C94708800519F90 /* LoginView */,
 				E4ACE98C1C946CE300C34510 /* AppDelegate.h */,
@@ -137,6 +141,15 @@
 				E4ACE98A1C946CE300C34510 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E4DECC551C947F0600162F1A /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				E4DECC561C947F1B00162F1A /* UIView+LayoutExtension.h */,
+				E4DECC571C947F1B00162F1A /* UIView+LayoutExtension.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +275,7 @@
 			files = (
 				E4ACE9941C946CE300C34510 /* SecondViewController.m in Sources */,
 				E409396B1C94768700519F90 /* User.m in Sources */,
+				E4DECC581C947F1B00162F1A /* UIView+LayoutExtension.m in Sources */,
 				E4ACE98E1C946CE300C34510 /* AppDelegate.m in Sources */,
 				E4ACE9911C946CE300C34510 /* FirstViewController.m in Sources */,
 				E4ACE98B1C946CE300C34510 /* main.m in Sources */,
