@@ -14,6 +14,7 @@
 #import "MedTableViewCell.h"
 #import "Medication.h"
 #import "Networking.h"
+#import "MedicationDVViewController.h"
 
 @interface MedsMasterTableViewController ()
 
@@ -174,6 +175,12 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.medications.count;
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    MedicationDVViewController * vc = segue.destinationViewController;
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    vc.medication = [self.medications objectAtIndex:indexPath.row];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
