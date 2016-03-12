@@ -58,12 +58,13 @@
     NSString * url = [[NSString stringWithFormat:@"https://navhealth.herokuapp.com/api/fhir/Patient?id=%@", self.identificationTextField.text] stringByAddingPercentEscapesUsingEncoding:
                       NSASCIIStringEncoding];
     
-    [self. manager GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [self.manager GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSError *error;
         NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:&error];
         
         if([[json objectForKey:@"entry"] count] > 0){
             [self.defaults setObject:self.identificationTextField.text forKey:@"id"];
+            
             UIWindow *window = [[UIApplication sharedApplication].delegate window];
         
             UIView *introSnapshot = [[UIScreen mainScreen] snapshotViewAfterScreenUpdates:NO];
@@ -97,9 +98,13 @@
                 [homeSnapshot removeFromSuperview];
             }];
         }
+        else{
+            self.alertTextLabel.text= @"That identification number is incorrect";
+        }
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@", error);
+        
     }];
 
     
