@@ -18,7 +18,7 @@
 		E4ACE99C1C946CE300C34510 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4ACE99A1C946CE300C34510 /* LaunchScreen.storyboard */; };
 		E4DECC581C947F1B00162F1A /* UIView+LayoutExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DECC571C947F1B00162F1A /* UIView+LayoutExtension.m */; };
 		E4DECC5F1C94866C00162F1A /* NavController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DECC5E1C94866C00162F1A /* NavController.m */; };
-		E4DECC631C94870300162F1A /* MedsMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DECC621C94870300162F1A /* MedsMasterViewController.m */; };
+		E4DECC661C9487EF00162F1A /* MedsMasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DECC651C9487EF00162F1A /* MedsMasterTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,8 +43,8 @@
 		E4DECC571C947F1B00162F1A /* UIView+LayoutExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LayoutExtension.m"; sourceTree = "<group>"; };
 		E4DECC5D1C94866C00162F1A /* NavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavController.h; sourceTree = "<group>"; };
 		E4DECC5E1C94866C00162F1A /* NavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavController.m; sourceTree = "<group>"; };
-		E4DECC611C94870300162F1A /* MedsMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedsMasterViewController.h; sourceTree = "<group>"; };
-		E4DECC621C94870300162F1A /* MedsMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedsMasterViewController.m; sourceTree = "<group>"; };
+		E4DECC641C9487EF00162F1A /* MedsMasterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedsMasterTableViewController.h; sourceTree = "<group>"; };
+		E4DECC651C9487EF00162F1A /* MedsMasterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedsMasterTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,8 +162,8 @@
 		E4DECC601C9486E200162F1A /* Meds */ = {
 			isa = PBXGroup;
 			children = (
-				E4DECC611C94870300162F1A /* MedsMasterViewController.h */,
-				E4DECC621C94870300162F1A /* MedsMasterViewController.m */,
+				E4DECC641C9487EF00162F1A /* MedsMasterTableViewController.h */,
+				E4DECC651C9487EF00162F1A /* MedsMasterTableViewController.m */,
 			);
 			name = Meds;
 			sourceTree = "<group>";
@@ -290,12 +290,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E409396B1C94768700519F90 /* User.m in Sources */,
-				E4DECC631C94870300162F1A /* MedsMasterViewController.m in Sources */,
 				E4DECC581C947F1B00162F1A /* UIView+LayoutExtension.m in Sources */,
 				E4ACE98E1C946CE300C34510 /* AppDelegate.m in Sources */,
 				E4DECC5F1C94866C00162F1A /* NavController.m in Sources */,
 				E4ACE98B1C946CE300C34510 /* main.m in Sources */,
 				E409395E1C94706800519F90 /* LoginViewController.m in Sources */,
+				E4DECC661C9487EF00162F1A /* MedsMasterTableViewController.m in Sources */,
 				E40939631C94728400519F90 /* Authorization.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

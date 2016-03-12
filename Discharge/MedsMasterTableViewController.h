@@ -1,5 +1,5 @@
 //
-//  MedsMasterViewController.h
+//  MedsMasterTableViewController.h
 //  Discharge
 //
 //  Created by Ferose Babu on 3/12/16.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MedsMasterViewController : UIViewController
+@interface MedsMasterTableViewController : UITableViewController
 
 @end
