@@ -10,7 +10,6 @@
 		2DA891B20AAAAB09C5C2FF01 /* libPods-Discharge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 533102C67DA1047B4508F35C /* libPods-Discharge.a */; };
 		514919B01C94AEF100DC6749 /* InfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 514919AF1C94AEF100DC6749 /* InfoTableViewController.m */; };
 		9A0DE5AB1C949E1400559440 /* ContactNumbersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DE5AA1C949E1400559440 /* ContactNumbersViewController.m */; };
-		9A0DE5AE1C94C06A00559440 /* MedicationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DE5AD1C94C06A00559440 /* MedicationDetailViewController.m */; };
 		E409395E1C94706800519F90 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E409395C1C94706800519F90 /* LoginViewController.m */; };
 		E40939631C94728400519F90 /* Authorization.m in Sources */ = {isa = PBXBuildFile; fileRef = E40939621C94728400519F90 /* Authorization.m */; };
 		E409396B1C94768700519F90 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E409396A1C94768700519F90 /* User.m */; };
@@ -273,7 +272,7 @@
 				TargetAttributes = {
 					E4ACE9851C946CE300C34510 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = Z368FJ9ZFJ;
+						DevelopmentTeam = 788Q6NYZ88;
 					};
 				};
 			};
@@ -495,7 +494,7 @@
 				INFOPLIST_FILE = Discharge/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = NYP.Discharge;
+				PRODUCT_BUNDLE_IDENTIFIER = NYP.Dischargek;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -510,7 +509,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Discharge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = NYP.Discharge;
+				PRODUCT_BUNDLE_IDENTIFIER = NYP.Dischargek;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
