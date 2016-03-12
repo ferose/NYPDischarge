@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2DA891B20AAAAB09C5C2FF01 /* libPods-Discharge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 533102C67DA1047B4508F35C /* libPods-Discharge.a */; };
+		E409395E1C94706800519F90 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E409395C1C94706800519F90 /* LoginViewController.m */; };
+		E409395F1C94706800519F90 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E409395D1C94706800519F90 /* LoginViewController.xib */; };
+		E40939631C94728400519F90 /* Authorization.m in Sources */ = {isa = PBXBuildFile; fileRef = E40939621C94728400519F90 /* Authorization.m */; };
 		E4ACE98B1C946CE300C34510 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4ACE98A1C946CE300C34510 /* main.m */; };
 		E4ACE98E1C946CE300C34510 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4ACE98D1C946CE300C34510 /* AppDelegate.m */; };
 		E4ACE9911C946CE300C34510 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4ACE9901C946CE300C34510 /* FirstViewController.m */; };
@@ -21,6 +24,11 @@
 		17A21B2701648140CFAC519F /* Pods-Discharge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Discharge.release.xcconfig"; path = "Pods/Target Support Files/Pods-Discharge/Pods-Discharge.release.xcconfig"; sourceTree = "<group>"; };
 		36E3736C93AB19A587C728FC /* Pods-Discharge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Discharge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Discharge/Pods-Discharge.debug.xcconfig"; sourceTree = "<group>"; };
 		533102C67DA1047B4508F35C /* libPods-Discharge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Discharge.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E409395B1C94706800519F90 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		E409395C1C94706800519F90 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		E409395D1C94706800519F90 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		E40939611C94728400519F90 /* Authorization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Authorization.h; sourceTree = "<group>"; };
+		E40939621C94728400519F90 /* Authorization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Authorization.m; sourceTree = "<group>"; };
 		E4ACE9861C946CE300C34510 /* Discharge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Discharge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4ACE98A1C946CE300C34510 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E4ACE98C1C946CE300C34510 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -64,6 +72,18 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E40939601C94708800519F90 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E409395B1C94706800519F90 /* LoginViewController.h */,
+				E409395C1C94706800519F90 /* LoginViewController.m */,
+				E409395D1C94706800519F90 /* LoginViewController.xib */,
+				E40939611C94728400519F90 /* Authorization.h */,
+				E40939621C94728400519F90 /* Authorization.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
 		E4ACE97D1C946CE300C34510 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +105,7 @@
 		E4ACE9881C946CE300C34510 /* Discharge */ = {
 			isa = PBXGroup;
 			children = (
+				E40939601C94708800519F90 /* Login */,
 				E4ACE98C1C946CE300C34510 /* AppDelegate.h */,
 				E4ACE98D1C946CE300C34510 /* AppDelegate.m */,
 				E4ACE98F1C946CE300C34510 /* FirstViewController.h */,
@@ -168,6 +189,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E409395F1C94706800519F90 /* LoginViewController.xib in Resources */,
 				E4ACE99C1C946CE300C34510 /* LaunchScreen.storyboard in Resources */,
 				E4ACE9991C946CE300C34510 /* Assets.xcassets in Resources */,
 				E4ACE9971C946CE300C34510 /* Main.storyboard in Resources */,
@@ -233,6 +255,8 @@
 				E4ACE98E1C946CE300C34510 /* AppDelegate.m in Sources */,
 				E4ACE9911C946CE300C34510 /* FirstViewController.m in Sources */,
 				E4ACE98B1C946CE300C34510 /* main.m in Sources */,
+				E409395E1C94706800519F90 /* LoginViewController.m in Sources */,
+				E40939631C94728400519F90 /* Authorization.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
