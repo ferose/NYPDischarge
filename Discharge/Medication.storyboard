@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Medication-->
+        <scene sceneID="8VF-bn-w7E">
+            <objects>
+                <tableViewController id="xDc-CL-Wrn" customClass="MedsMasterTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="118" sectionHeaderHeight="28" sectionFooterHeight="28" id="71w-s1-yta">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MedCell" rowHeight="117" id="q9B-AM-Fif">
+                                <rect key="frame" x="0.0" y="92" width="600" height="117"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="q9B-AM-Fif" id="zcK-mf-EAQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="116.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yMk-je-Txs">
+                                            <rect key="frame" x="8" y="8" width="100" height="100"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="100" id="1Ss-HW-Wfm"/>
+                                                <constraint firstAttribute="height" constant="100" id="acj-mF-xH3"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pill Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EbK-EE-qa4">
+                                            <rect key="frame" x="116" y="8" width="76" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dosage:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPT-sD-nw6">
+                                            <rect key="frame" x="116" y="37" width="64" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Frequencies:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QzR-wY-rrU">
+                                            <rect key="frame" x="116" y="66" width="99" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="yMk-je-Txs" firstAttribute="top" secondItem="zcK-mf-EAQ" secondAttribute="topMargin" id="1xu-wR-GTW"/>
+                                        <constraint firstItem="dPT-sD-nw6" firstAttribute="top" secondItem="EbK-EE-qa4" secondAttribute="bottom" constant="8" id="9Al-PA-DcW"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="yMk-je-Txs" secondAttribute="bottom" id="CTc-yB-KY7"/>
+                                        <constraint firstItem="QzR-wY-rrU" firstAttribute="top" secondItem="dPT-sD-nw6" secondAttribute="bottom" constant="8" id="J6k-ON-5Ex"/>
+                                        <constraint firstItem="dPT-sD-nw6" firstAttribute="leading" secondItem="yMk-je-Txs" secondAttribute="trailing" constant="8" id="V98-ct-FSQ"/>
+                                        <constraint firstItem="EbK-EE-qa4" firstAttribute="leading" secondItem="yMk-je-Txs" secondAttribute="trailing" constant="8" id="cFI-oI-4sm"/>
+                                        <constraint firstItem="QzR-wY-rrU" firstAttribute="leading" secondItem="yMk-je-Txs" secondAttribute="trailing" constant="8" id="fuZ-72-Cjm"/>
+                                        <constraint firstItem="EbK-EE-qa4" firstAttribute="top" secondItem="zcK-mf-EAQ" secondAttribute="topMargin" id="mMn-TO-es1"/>
+                                        <constraint firstItem="yMk-je-Txs" firstAttribute="leading" secondItem="zcK-mf-EAQ" secondAttribute="leadingMargin" id="yJ8-oG-c41"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xDc-CL-Wrn" id="Mdc-as-vga"/>
+                            <outlet property="delegate" destination="xDc-CL-Wrn" id="2jA-1E-laE"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Medication" id="yFE-Uc-Njk"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jf9-d6-2nn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1695" y="0.0"/>
+        </scene>
+        <!--Meds-->
+        <scene sceneID="mVv-Zx-cnB">
+            <objects>
+                <navigationController storyboardIdentifier="NavController" title="Meds" id="IrS-ZQ-hLJ" customClass="NavController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Meds" id="hJJ-yc-TpU"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jZ4-K1-6Y9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="xDc-CL-Wrn" kind="relationship" relationship="rootViewController" id="7nK-N1-DEl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ukh-45-RBw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="986" y="0.0"/>
+        </scene>
+    </scenes>
+</document>
