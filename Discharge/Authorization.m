@@ -9,6 +9,7 @@
 #import "Authorization.h"
 #import "User.h"
 #import "LoginViewController.h"
+#import "AFOAuth2Manager.h"
 
 @implementation Authorization
 
@@ -21,6 +22,19 @@
     });
     
     return shared;
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [self setup];
+    }
+    return self;
+}
+
+-(void)setup
+{
 }
 
 -(void)appStart
