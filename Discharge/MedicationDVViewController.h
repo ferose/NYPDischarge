@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Medication.h"
 
 @interface MedicationDVViewController : UIViewController
 
+@property (nonatomic) Medication *medication;
 @end

@@ -20,6 +20,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.drugName.text = self.medication.name;
+    self.dosage.text = self.medication.dosage;
+    self.frequency.text = self.medication.frequency;
+    
+    
     // Do any additional setup after loading the view.
 }
 
