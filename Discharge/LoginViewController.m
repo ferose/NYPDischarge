@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "UIView+LayoutExtension.h"
 #import <AFNetworking/AFNetworking.h>
+#import <RSBarcodes/RSBarcodes.h>
 #import "Networking.h"
 #import "User.h"
 
@@ -99,6 +100,25 @@
         self.alertTextLabel.text= @"That identification number is incorrect";
     }];
 
+}
+- (IBAction)didTapScan:(id)sender {
+    RSScannerViewController *scanner = [[RSScannerViewController alloc] initWithCornerView:YES
+                                                                               controlView:YES
+                                                                           barcodesHandler:^(NSArray *barcodeObjects) {
+                                                                               AVMetadataMachineReadableCodeObject *something = [barcodeObjects firstObject];
+                                                                               
+                                                                               
+                                                                               [self dismissViewControllerAnimated:YES completion:^{
+                                                                                   self.identificationTextField.text = something.stringValue;
+                                                                               }];
+                                                                               
+                                                                               
+                                                                           }
+                                                                   preferredCameraPosition:AVCaptureDevicePositionBack];
+    [scanner setStopOnFirst:YES];
+    
+    [self presentViewController:scanner animated:YES completion:nil];
+    
 }
 
 @end
