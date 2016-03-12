@@ -9,7 +9,6 @@
 #import "Authorization.h"
 #import "User.h"
 #import "LoginViewController.h"
-#import "AFOAuth2Manager.h"
 
 @implementation Authorization
 
