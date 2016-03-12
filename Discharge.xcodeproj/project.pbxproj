@@ -99,8 +99,6 @@
 		E40939681C94767200519F90 /* User */ = {
 			isa = PBXGroup;
 			children = (
-				E40939611C94728400519F90 /* Authorization.h */,
-				E40939621C94728400519F90 /* Authorization.m */,
 				E40939691C94768700519F90 /* User.h */,
 				E409396A1C94768700519F90 /* User.m */,
 			);
@@ -185,6 +183,8 @@
 		E4DECC671C9496A700162F1A /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				E40939611C94728400519F90 /* Authorization.h */,
+				E40939621C94728400519F90 /* Authorization.m */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -446,6 +446,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Discharge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NYP.Discharge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -458,6 +459,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Discharge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NYP.Discharge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
