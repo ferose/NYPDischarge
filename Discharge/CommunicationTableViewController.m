@@ -114,7 +114,7 @@ UITableViewCell *cell = nil;
         
         // dummy data:
         Encounter *obj = [self.encounters objectAtIndex:indexPath.row];
-        cell2.imageView.image = [UIImage imageNamed:self.image[indexPath.row%3]];
+        cell2.customImageView.image = [UIImage imageNamed:self.image[indexPath.row%3]];
         cell2.labelDate.text = obj.date;
         cell2.labelTreatment.text = obj.cause;
         return cell2;
