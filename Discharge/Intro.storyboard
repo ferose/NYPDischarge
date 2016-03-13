@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -55,18 +56,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Slide 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w4f-ZD-iSv">
-                                <rect key="frame" x="272" y="289" width="53" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NewYork-Presbyterian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TvK-4Q-mdv">
+                                <rect key="frame" x="166.5" y="286" width="267" height="27"/>
+                                <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discharge App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wga-T3-e9Y">
+                                <rect key="frame" x="234" y="318" width="131.5" height="21.5"/>
+                                <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome To The" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4p-4d-YKD">
+                                <rect key="frame" x="225" y="260" width="150" height="21.5"/>
+                                <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.78823529410000004" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.86666666670000003" green="0.29411764709999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="w4f-ZD-iSv" firstAttribute="centerY" secondItem="qrG-d4-bwK" secondAttribute="centerY" id="749-LN-AcQ"/>
-                            <constraint firstItem="w4f-ZD-iSv" firstAttribute="centerX" secondItem="qrG-d4-bwK" secondAttribute="centerX" id="EN2-Qp-6LM"/>
+                            <constraint firstItem="TvK-4Q-mdv" firstAttribute="centerX" secondItem="qrG-d4-bwK" secondAttribute="centerX" id="4VW-HJ-lY8"/>
+                            <constraint firstItem="wga-T3-e9Y" firstAttribute="centerX" secondItem="qrG-d4-bwK" secondAttribute="centerX" id="7mY-vU-vHA"/>
+                            <constraint firstItem="S4p-4d-YKD" firstAttribute="centerX" secondItem="qrG-d4-bwK" secondAttribute="centerX" id="G23-h4-rdD"/>
+                            <constraint firstItem="TvK-4Q-mdv" firstAttribute="centerX" secondItem="qrG-d4-bwK" secondAttribute="centerX" id="MZv-dm-dyR"/>
+                            <constraint firstItem="TvK-4Q-mdv" firstAttribute="centerY" secondItem="qrG-d4-bwK" secondAttribute="centerY" id="ee1-mS-cJI"/>
+                            <constraint firstItem="TvK-4Q-mdv" firstAttribute="top" secondItem="S4p-4d-YKD" secondAttribute="bottom" constant="5" id="s6A-SP-0ea"/>
+                            <constraint firstItem="wga-T3-e9Y" firstAttribute="top" secondItem="TvK-4Q-mdv" secondAttribute="bottom" constant="5" id="y52-7f-6Bq"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="MZv-dm-dyR"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2CD-db-9XG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -81,27 +104,59 @@
                         <viewControllerLayoutGuide type="top" id="ZMc-az-XI9"/>
                         <viewControllerLayoutGuide type="bottom" id="tc8-Sb-Ex4"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Dic-SN-YZT">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="Dic-SN-YZT">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Slide 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kr2-Ev-cZC">
-                                <rect key="frame" x="271" y="289" width="50" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Appointments" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYI-io-mbo">
+                                <rect key="frame" x="245.5" y="301.5" width="110.5" height="19.5"/>
+                                <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diagnosis Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdR-4W-0vj">
+                                <rect key="frame" x="230" y="272" width="139.5" height="19.5"/>
+                                <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medications" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8X-AS-ZmQ">
+                                <rect key="frame" x="251.5" y="360.5" width="96.5" height="19.5"/>
+                                <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This app helps with: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYz-FJ-6aK">
+                                <rect key="frame" x="177" y="236.5" width="246.5" height="27"/>
+                                <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reminders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TyK-2h-ZJu">
+                                <rect key="frame" x="256.5" y="331" width="87.5" height="19.5"/>
+                                <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.78823529410000004" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.86666666670000003" green="0.29411764709999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="kr2-Ev-cZC" firstAttribute="centerY" secondItem="Dic-SN-YZT" secondAttribute="centerY" id="9eu-pW-Dm9"/>
-                            <constraint firstItem="kr2-Ev-cZC" firstAttribute="centerX" secondItem="Dic-SN-YZT" secondAttribute="centerX" id="IBB-UQ-33O"/>
+                            <constraint firstItem="DYz-FJ-6aK" firstAttribute="centerY" secondItem="Dic-SN-YZT" secondAttribute="centerY" constant="-50" id="1r1-Aw-HYl"/>
+                            <constraint firstItem="qdR-4W-0vj" firstAttribute="top" secondItem="DYz-FJ-6aK" secondAttribute="bottom" constant="8" id="2pL-Li-S7T"/>
+                            <constraint firstItem="q8X-AS-ZmQ" firstAttribute="centerX" secondItem="Dic-SN-YZT" secondAttribute="centerX" id="8PG-8c-vhR"/>
+                            <constraint firstItem="TyK-2h-ZJu" firstAttribute="centerX" secondItem="Dic-SN-YZT" secondAttribute="centerX" id="C3l-qK-5j1"/>
+                            <constraint firstItem="TyK-2h-ZJu" firstAttribute="top" secondItem="rYI-io-mbo" secondAttribute="bottom" constant="10" id="HNI-Ib-ivf"/>
+                            <constraint firstItem="q8X-AS-ZmQ" firstAttribute="top" secondItem="TyK-2h-ZJu" secondAttribute="bottom" constant="10" id="NsW-ao-fjB"/>
+                            <constraint firstItem="rYI-io-mbo" firstAttribute="centerX" secondItem="Dic-SN-YZT" secondAttribute="centerX" id="aVX-fe-joX"/>
+                            <constraint firstItem="DYz-FJ-6aK" firstAttribute="centerX" secondItem="Dic-SN-YZT" secondAttribute="centerX" id="frH-tv-bbE"/>
+                            <constraint firstItem="rYI-io-mbo" firstAttribute="top" secondItem="qdR-4W-0vj" secondAttribute="bottom" constant="10" id="yTo-4j-sNe"/>
+                            <constraint firstItem="qdR-4W-0vj" firstAttribute="centerX" secondItem="Dic-SN-YZT" secondAttribute="centerX" id="yjy-AJ-FuR"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bIO-mz-zlg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-59" y="1222"/>
+            <point key="canvasLocation" x="-5" y="1259"/>
         </scene>
         <!--Barcode Slide View Controller-->
         <scene sceneID="dFF-Bs-hlX">
@@ -129,22 +184,64 @@
                         <viewControllerLayoutGuide type="top" id="APw-kV-b5q"/>
                         <viewControllerLayoutGuide type="bottom" id="M5w-8p-q85"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ym8-Mf-MKA">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="ym8-Mf-MKA">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Slide 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soV-Eb-WJW">
-                                <rect key="frame" x="269" y="289" width="52" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To access your discharge info: " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scM-Ap-dyc">
+                                <rect key="frame" x="40" y="246" width="520" height="27"/>
+                                <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe to the next screen" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqk-E7-kyi">
+                                <rect key="frame" x="40" y="312" width="520" height="19.5"/>
+                                <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGX-em-5Rf">
+                                <rect key="frame" x="533" y="354" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan it!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSE-p4-U4m">
+                                <rect key="frame" x="270" y="342" width="60" height="19.5"/>
+                                <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Locate the barcode on your discharge paperwork" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L60-LE-ayv">
+                                <rect key="frame" x="40" y="283" width="520" height="19.5"/>
+                                <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.78823529410000004" green="0.1333333333" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.86666666670000003" green="0.29411764709999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="soV-Eb-WJW" firstAttribute="centerY" secondItem="ym8-Mf-MKA" secondAttribute="centerY" id="6qZ-hb-XQq"/>
-                            <constraint firstItem="soV-Eb-WJW" firstAttribute="centerX" secondItem="ym8-Mf-MKA" secondAttribute="centerX" id="zcH-1s-MmY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="scM-Ap-dyc" secondAttribute="trailing" constant="20" id="11T-bg-vK8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iqk-E7-kyi" secondAttribute="trailing" constant="20" id="3d8-9v-cID"/>
+                            <constraint firstItem="cSE-p4-U4m" firstAttribute="top" secondItem="iqk-E7-kyi" secondAttribute="bottom" constant="10" id="3iM-xf-oA8"/>
+                            <constraint firstItem="iqk-E7-kyi" firstAttribute="leading" secondItem="L60-LE-ayv" secondAttribute="leading" id="4Ec-2Y-irb"/>
+                            <constraint firstItem="L60-LE-ayv" firstAttribute="top" secondItem="scM-Ap-dyc" secondAttribute="bottom" constant="10" id="8KT-e6-xFx"/>
+                            <constraint firstItem="scM-Ap-dyc" firstAttribute="centerY" secondItem="ym8-Mf-MKA" secondAttribute="centerY" constant="-40" id="B8F-z0-Xi5"/>
+                            <constraint firstItem="cSE-p4-U4m" firstAttribute="centerX" secondItem="ym8-Mf-MKA" secondAttribute="centerX" id="J3U-8a-DRY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="L60-LE-ayv" secondAttribute="trailing" constant="20" id="OGt-2z-m3y"/>
+                            <constraint firstItem="L60-LE-ayv" firstAttribute="leading" secondItem="scM-Ap-dyc" secondAttribute="leading" id="Ol6-VY-6HI"/>
+                            <constraint firstItem="scM-Ap-dyc" firstAttribute="leading" secondItem="ym8-Mf-MKA" secondAttribute="leadingMargin" constant="30" id="YfB-a2-mAo"/>
+                            <constraint firstItem="iqk-E7-kyi" firstAttribute="top" secondItem="L60-LE-ayv" secondAttribute="bottom" constant="10" id="myW-LH-8Xw"/>
+                            <constraint firstItem="scM-Ap-dyc" firstAttribute="centerX" secondItem="ym8-Mf-MKA" secondAttribute="centerX" id="tZ2-68-43f"/>
+                            <constraint firstItem="scM-Ap-dyc" firstAttribute="leading" secondItem="ym8-Mf-MKA" secondAttribute="leadingMargin" constant="20" id="wyw-6q-7Na"/>
+                            <constraint firstItem="scM-Ap-dyc" firstAttribute="centerX" secondItem="ym8-Mf-MKA" secondAttribute="centerX" id="zGJ-kj-w1S"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="YfB-a2-mAo"/>
+                                <exclude reference="zGJ-kj-w1S"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F1Q-9L-eUZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
