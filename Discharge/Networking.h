@@ -18,6 +18,9 @@
              failure:(void (^)(NSError *error))failure;
 
 -(void)queryPillName:(NSString *)pillName
-             success:(void (^)(NSDictionary *))success
-             failure:(void (^)(NSError *))failure;
+             success:(void (^)(NSDictionary *result))success
+             failure:(void (^)(NSError *error))failure;
+
+-(void)imageURLForPillName:(NSString *)pillName
+                completion:(void (^)(NSURL *imageURL))completion;
 @end

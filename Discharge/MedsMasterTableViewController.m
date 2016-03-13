@@ -15,6 +15,7 @@
 #import "Medication.h"
 #import "Networking.h"
 #import "MedicationDVViewController.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface MedsMasterTableViewController ()
 
@@ -191,6 +192,11 @@
     cell.drugName.text = med.name;
     cell.dosage.text = med.dosage;
     cell.frequency.text = med.frequency;
+    
+    [[Networking shared] imageURLForPillName:med.name completion:^(NSURL *imageURL) {
+        [cell.drugImage sd_setImageWithURL:imageURL];
+    }];
+
     // Configure the cell...
     
     return cell;

@@ -66,9 +66,11 @@
 }
 
 -(void)queryPillName:(NSString *)pillName
-             success:(void (^)(NSDictionary *))success
-             failure:(void (^)(NSError *))failure
+             success:(void (^)(NSDictionary *result))success
+             failure:(void (^)(NSError *error))failure
 {
+    pillName = [pillName stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+
     [self.manager GET:@"https://rximage.nlm.nih.gov/api/rximage/1/rxnav" parameters:@{@"name": pillName} progress:^(NSProgress * _Nonnull downloadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
@@ -78,4 +80,15 @@
     }];
 }
 
+-(void)imageURLForPillName:(NSString *)pillName
+                completion:(void (^)(NSURL *imageURL))completion
+{
+    [self queryPillName:pillName success:^(NSDictionary *result) {
+        NSString *urlString = [result[@"nlmRxImages"] firstObject][@"imageUrl"];
+        NSURL *imageURL = [NSURL URLWithString:urlString];
+        completion(imageURL);
+    } failure:^(NSError *error) {
+        completion(nil);
+    }];
+}
 @end
