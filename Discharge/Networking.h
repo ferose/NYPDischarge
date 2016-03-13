@@ -17,4 +17,7 @@
              success:(void (^)(NSDictionary *result))success
              failure:(void (^)(NSError *error))failure;
 
+-(void)queryPillName:(NSString *)pillName
+             success:(void (^)(NSDictionary *))success
+             failure:(void (^)(NSError *))failure;
 @end

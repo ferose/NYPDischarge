@@ -65,4 +65,17 @@
     }];
 }
 
+-(void)queryPillName:(NSString *)pillName
+             success:(void (^)(NSDictionary *))success
+             failure:(void (^)(NSError *))failure
+{
+    [self.manager GET:@"https://rximage.nlm.nih.gov/api/rximage/1/rxnav" parameters:@{@"name": pillName} progress:^(NSProgress * _Nonnull downloadProgress) {
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
+        success(json);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        failure(error);
+    }];
+}
+
 @end

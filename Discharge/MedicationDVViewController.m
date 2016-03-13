@@ -7,14 +7,15 @@
 //
 
 #import "MedicationDVViewController.h"
+#import "Networking.h"
 
 @interface MedicationDVViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *drugName;
 @property (weak, nonatomic) IBOutlet UILabel *dosage;
 @property (weak, nonatomic) IBOutlet UILabel *frequency;
-
 @property (weak, nonatomic) IBOutlet UIImageView *drugImage;
 @end
+
 
 @implementation MedicationDVViewController
 
@@ -24,13 +25,21 @@
     self.dosage.text = self.medication.dosage;
     self.frequency.text = self.medication.frequency;
     
+    [self makeImageAPICall:self.medication.name];
+    
     
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)makeImageAPICall:(NSString*)imageName{
+    imageName = [imageName stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    [[Networking shared] queryPillName:imageName success:^(NSDictionary *response) {
+        
+        
+    } failure:^(NSError *error) {
+        
+    }];
+    
 }
 
 /*
