@@ -189,13 +189,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To access your discharge info: " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scM-Ap-dyc">
-                                <rect key="frame" x="40" y="246" width="520" height="27"/>
+                                <rect key="frame" x="40" y="146.5" width="520" height="27"/>
                                 <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe to the next screen" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqk-E7-kyi">
-                                <rect key="frame" x="40" y="312" width="520" height="19.5"/>
+                                <rect key="frame" x="40" y="212.5" width="520" height="19.5"/>
                                 <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -207,13 +207,22 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan it!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSE-p4-U4m">
-                                <rect key="frame" x="270" y="342" width="60" height="19.5"/>
+                                <rect key="frame" x="270" y="242.5" width="60" height="19.5"/>
                                 <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Locate the barcode on your discharge paperwork" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L60-LE-ayv">
-                                <rect key="frame" x="40" y="283" width="520" height="19.5"/>
+                                <rect key="frame" x="40" y="183.5" width="520" height="19.5"/>
+                                <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode" translatesAutoresizingMaskIntoConstraints="NO" id="BeF-Y3-bXX">
+                                <rect key="frame" x="227.5" y="339.5" width="145" height="145"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It looks like this:" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXS-kZ-ikM">
+                                <rect key="frame" x="237" y="312" width="126.5" height="19.5"/>
                                 <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -225,14 +234,18 @@
                             <constraint firstAttribute="trailingMargin" secondItem="iqk-E7-kyi" secondAttribute="trailing" constant="20" id="3d8-9v-cID"/>
                             <constraint firstItem="cSE-p4-U4m" firstAttribute="top" secondItem="iqk-E7-kyi" secondAttribute="bottom" constant="10" id="3iM-xf-oA8"/>
                             <constraint firstItem="iqk-E7-kyi" firstAttribute="leading" secondItem="L60-LE-ayv" secondAttribute="leading" id="4Ec-2Y-irb"/>
+                            <constraint firstItem="fXS-kZ-ikM" firstAttribute="top" secondItem="cSE-p4-U4m" secondAttribute="bottom" constant="50" id="7Js-5c-MaX"/>
                             <constraint firstItem="L60-LE-ayv" firstAttribute="top" secondItem="scM-Ap-dyc" secondAttribute="bottom" constant="10" id="8KT-e6-xFx"/>
-                            <constraint firstItem="scM-Ap-dyc" firstAttribute="centerY" secondItem="ym8-Mf-MKA" secondAttribute="centerY" constant="-40" id="B8F-z0-Xi5"/>
+                            <constraint firstItem="scM-Ap-dyc" firstAttribute="centerY" secondItem="ym8-Mf-MKA" secondAttribute="centerY" constant="-140" id="B8F-z0-Xi5"/>
                             <constraint firstItem="cSE-p4-U4m" firstAttribute="centerX" secondItem="ym8-Mf-MKA" secondAttribute="centerX" id="J3U-8a-DRY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="L60-LE-ayv" secondAttribute="trailing" constant="20" id="OGt-2z-m3y"/>
                             <constraint firstItem="L60-LE-ayv" firstAttribute="leading" secondItem="scM-Ap-dyc" secondAttribute="leading" id="Ol6-VY-6HI"/>
                             <constraint firstItem="scM-Ap-dyc" firstAttribute="leading" secondItem="ym8-Mf-MKA" secondAttribute="leadingMargin" constant="30" id="YfB-a2-mAo"/>
+                            <constraint firstItem="BeF-Y3-bXX" firstAttribute="centerX" secondItem="ym8-Mf-MKA" secondAttribute="centerX" id="d4K-n8-9KV"/>
                             <constraint firstItem="iqk-E7-kyi" firstAttribute="top" secondItem="L60-LE-ayv" secondAttribute="bottom" constant="10" id="myW-LH-8Xw"/>
+                            <constraint firstItem="BeF-Y3-bXX" firstAttribute="top" secondItem="fXS-kZ-ikM" secondAttribute="bottom" constant="8" id="nmm-hd-WJn"/>
                             <constraint firstItem="scM-Ap-dyc" firstAttribute="centerX" secondItem="ym8-Mf-MKA" secondAttribute="centerX" id="tZ2-68-43f"/>
+                            <constraint firstItem="fXS-kZ-ikM" firstAttribute="centerX" secondItem="ym8-Mf-MKA" secondAttribute="centerX" id="wPH-Y1-ybY"/>
                             <constraint firstItem="scM-Ap-dyc" firstAttribute="leading" secondItem="ym8-Mf-MKA" secondAttribute="leadingMargin" constant="20" id="wyw-6q-7Na"/>
                             <constraint firstItem="scM-Ap-dyc" firstAttribute="centerX" secondItem="ym8-Mf-MKA" secondAttribute="centerX" id="zGJ-kj-w1S"/>
                         </constraints>
@@ -249,4 +262,7 @@
             <point key="canvasLocation" x="637" y="1222"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="qrcode" width="145" height="145"/>
+    </resources>
 </document>
