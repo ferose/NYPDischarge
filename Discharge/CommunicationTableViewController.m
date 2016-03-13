@@ -6,13 +6,15 @@
 //  Copyright © 2016 NYP. All rights reserved.
 //
 
+@import MessageUI;
+
 #import "CommunicationTableViewController.h"
 #import "CommunicationTableViewCell.h"
 #import "ContactTableViewCell.h"
 #import "Networking.h"
 #import "Encounter.h"
 
-@interface CommunicationTableViewController ()
+@interface CommunicationTableViewController () <MFMailComposeViewControllerDelegate>
 
 
 
@@ -173,5 +175,30 @@ UITableViewCell *cell = nil;
     // Pass the selected object to the new view controller.
 }
 */
+- (IBAction)emailTapped:(id)sender {
+    if (![MFMailComposeViewController canSendMail]) {
+        UIAlertController * alert=   [UIAlertController
+                                      alertControllerWithTitle: @"Email not configured"
+                                      message:@"Please configure email"
+                                      preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                   handler:nil];
+        [alert addAction:ok];
+        [self presentViewController:alert animated:YES completion:nil];
+        return;
+    }
+    
+    MFMailComposeViewController* mailVC = [[MFMailComposeViewController alloc] init];
+    mailVC.view.tintColor = [UIColor blackColor];
+    [mailVC setToRecipients:@[@"patientsupport@nyp.org"]];
+    [mailVC setSubject:@"Email Patient Support"];
+    mailVC.mailComposeDelegate = self;
+    
+    [self presentViewController:mailVC animated:YES completion:nil];
+}
 
+-(void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end
