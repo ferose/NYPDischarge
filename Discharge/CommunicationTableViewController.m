@@ -9,6 +9,8 @@
 #import "CommunicationTableViewController.h"
 #import "CommunicationTableViewCell.h"
 #import "ContactTableViewCell.h"
+#import "Networking.h"
+#import "Encounter.h"
 
 @interface CommunicationTableViewController ()
 
@@ -23,25 +25,47 @@
     [super viewDidLoad];
     
     // dummy data:
-    self.image = @[@"0", @"1", @"2", @"3", @"4", @"5"];
-    self.date = @[@"Monday, March 14, 2016",
-                  @"Wednesday, March 16, 2016",
-                  @"Thursday, March 31, 2016",
-                  @"Monday, April 4, 2016",
-                  @"Monday, April 4, 2016",
-                  @"Tuesday, April 5, 2016"];
-    self.time = @[@"4:00pm",
-                  @"11:15am",
-                  @"3:45pm",
-                  @"11:05am",
-                  @"4:30pm",
-                  @"2:20pm"];
-    self.treatment = @[@"Blood Tests with Dr. Dorian",
-                       @"Examination with Dr. Scully",
-                       @"Allergy Test with Dr. Evil",
-                       @"Vaccination with Dr. Quinn",
-                       @"Blood Tests with Dr. Spock",
-                       @"X-Rays with Dr. Mario"];
+    self.image = @[@"1", @"2", @"3", @"4", @"5"];
+    self.encounters = [[NSMutableArray alloc] init];
+    
+    
+    
+    //https://navhealth.herokuapp.com/api/fhir/Encounter?patient=
+    
+    [[Networking shared] queryResource:@"Encounter" withParams:nil success:^(NSDictionary *result) {
+        for (NSDictionary *encounter in [result objectForKey:@"entry"]) {
+            
+            Encounter *encounterObject = [[Encounter alloc] init];
+            
+           NSString *dateString = [[[encounter objectForKey:@"resource"] objectForKey:@"period"] objectForKey:@"start"];
+            //2013-10-11T00:00:00.000Z
+            NSRange startRange = [dateString rangeOfString:@"T"];
+            dateString = [dateString substringToIndex:startRange.location];
+
+            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+            [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+            
+            NSDate *formattedDateString = [dateFormatter dateFromString:dateString];
+            NSDateFormatter *weekday = [[NSDateFormatter alloc] init];
+            [weekday setDateFormat: @"EEEE, "];
+            NSString *weekdayString = [weekday stringFromDate:formattedDateString];
+            
+            NSDateFormatter *dateF = [[NSDateFormatter alloc] init];
+            dateF.timeStyle = NSDateFormatterNoStyle;
+            dateF.dateStyle = NSDateFormatterMediumStyle;
+
+            NSString *finalDateString = [weekdayString stringByAppendingString:[dateF stringFromDate:formattedDateString]];
+            encounterObject.date = finalDateString;
+            encounterObject.cause = [[encounter objectForKey:@"resource"] objectForKey:@"class"];
+            [self.encounters addObject:encounterObject];
+            NSLog(@"%@", encounterObject);
+            [self.tableView reloadData];
+        }
+        
+    } failure:^(NSError *error) {
+        NSLog(@"fail");
+    }];
+    
     
     
     
@@ -64,7 +88,7 @@
     if (section == 0) {
         return 1;
     }
-    return 5;
+    return self.encounters.count;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -79,26 +103,31 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = nil;
-
+    
+UITableViewCell *cell = nil;
     
     if (indexPath.section == 0) {
+        
         cell = [tableView dequeueReusableCellWithIdentifier:@"CummunicationsCell" forIndexPath:indexPath];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return cell;
     }
     else if (indexPath.section == 1) {
-        cell = [tableView dequeueReusableCellWithIdentifier:@"AppointmentCell" forIndexPath:indexPath];
+        CommunicationTableViewCell *cell2 = [tableView dequeueReusableCellWithIdentifier:@"AppointmentCell" forIndexPath:indexPath];
         
         // dummy data:
-        NSInteger row = [indexPath row];
-        cell.imageView.image = [UIImage imageNamed:self.image[row]];
+        Encounter *obj = [self.encounters objectAtIndex:indexPath.row];
+        cell2.imageView.image = [UIImage imageNamed:self.image[indexPath.row]];
+        cell2.labelDate.text = obj.date;
+        cell2.labelTreatment.text = obj.cause;
+        return cell2;
     
     }
     
     
     // Configure the cell...
-    
     return cell;
+    
 }
 
 /*
