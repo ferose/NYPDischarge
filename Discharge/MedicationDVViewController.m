@@ -8,6 +8,8 @@
 
 #import "MedicationDVViewController.h"
 #import "Networking.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+
 
 @interface MedicationDVViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *drugName;
@@ -35,6 +37,11 @@
     imageName = [imageName stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     [[Networking shared] queryPillName:imageName success:^(NSDictionary *response) {
         
+        NSString *urlString = [response[@"nlmRxImages"] firstObject][@"imageUrl"];
+        
+        NSURL *imageURL = [NSURL URLWithString:urlString];
+        
+        [self.drugImage sd_setImageWithURL:imageURL];
         
     } failure:^(NSError *error) {
         
