@@ -17,6 +17,7 @@
 		E409396B1C94768700519F90 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E409396A1C94768700519F90 /* User.m */; };
 		E43DCEA01C94C82D0060D5F1 /* CommunicationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E43DCE9F1C94C82D0060D5F1 /* CommunicationTableViewController.m */; };
 		E43DCEA41C94D4400060D5F1 /* QuestionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E43DCEA31C94D4400060D5F1 /* QuestionTableViewController.m */; };
+		E43DCEA61C95BB950060D5F1 /* Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E43DCEA51C95BB950060D5F1 /* Intro.storyboard */; };
 		E4ACE98B1C946CE300C34510 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4ACE98A1C946CE300C34510 /* main.m */; };
 		E4ACE98E1C946CE300C34510 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4ACE98D1C946CE300C34510 /* AppDelegate.m */; };
 		E4ACE9971C946CE300C34510 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4ACE9951C946CE300C34510 /* Main.storyboard */; };
@@ -58,6 +59,7 @@
 		E43DCE9F1C94C82D0060D5F1 /* CommunicationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommunicationTableViewController.m; sourceTree = "<group>"; };
 		E43DCEA21C94D4400060D5F1 /* QuestionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionTableViewController.h; sourceTree = "<group>"; };
 		E43DCEA31C94D4400060D5F1 /* QuestionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionTableViewController.m; sourceTree = "<group>"; };
+		E43DCEA51C95BB950060D5F1 /* Intro.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Intro.storyboard; sourceTree = "<group>"; };
 		E4ACE9861C946CE300C34510 /* Discharge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Discharge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4ACE98A1C946CE300C34510 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E4ACE98C1C946CE300C34510 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 				F0EED0071C94AEE000AABE5A /* MedTableViewCell.m */,
 				E4DECC6E1C94996F00162F1A /* Info.storyboard */,
 				E4DECC731C949CCF00162F1A /* Question.storyboard */,
+				E43DCEA51C95BB950060D5F1 /* Intro.storyboard */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				E4DECC6F1C94996F00162F1A /* Info.storyboard in Resources */,
 				E4ACE99C1C946CE300C34510 /* LaunchScreen.storyboard in Resources */,
 				E4DECC6B1C94994D00162F1A /* Communication.storyboard in Resources */,
+				E43DCEA61C95BB950060D5F1 /* Intro.storyboard in Resources */,
 				E4ACE9991C946CE300C34510 /* Assets.xcassets in Resources */,
 				E4ACE9971C946CE300C34510 /* Main.storyboard in Resources */,
 				E4DECC6D1C94995C00162F1A /* Medication.storyboard in Resources */,
