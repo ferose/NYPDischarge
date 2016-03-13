@@ -11,7 +11,6 @@
 		4D15E35F1C94F76D00A034EA /* CommunicationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D15E35E1C94F76D00A034EA /* CommunicationTableViewCell.m */; };
 		4D7FAB621C951DD6008C691B /* ContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7FAB611C951DD6008C691B /* ContactTableViewCell.m */; };
 		514919B01C94AEF100DC6749 /* InfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 514919AF1C94AEF100DC6749 /* InfoTableViewController.m */; };
-		9A0DE5AB1C949E1400559440 /* ContactNumbersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DE5AA1C949E1400559440 /* ContactNumbersViewController.m */; };
 		E409395E1C94706800519F90 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E409395C1C94706800519F90 /* LoginViewController.m */; };
 		E40939631C94728400519F90 /* Authorization.m in Sources */ = {isa = PBXBuildFile; fileRef = E40939621C94728400519F90 /* Authorization.m */; };
 		E409396B1C94768700519F90 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E409396A1C94768700519F90 /* User.m */; };
@@ -19,6 +18,7 @@
 		E43DCEA41C94D4400060D5F1 /* QuestionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E43DCEA31C94D4400060D5F1 /* QuestionTableViewController.m */; };
 		E43DCEA61C95BB950060D5F1 /* Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E43DCEA51C95BB950060D5F1 /* Intro.storyboard */; };
 		E43DCEAC1C95BFDD0060D5F1 /* BarcodeSlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E43DCEAB1C95BFDD0060D5F1 /* BarcodeSlideViewController.m */; };
+		E4761F4A1C95D89E00D25D2C /* ContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4761F491C95D89E00D25D2C /* ContactsTableViewController.m */; };
 		E4ACE98B1C946CE300C34510 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4ACE98A1C946CE300C34510 /* main.m */; };
 		E4ACE98E1C946CE300C34510 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4ACE98D1C946CE300C34510 /* AppDelegate.m */; };
 		E4ACE9971C946CE300C34510 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4ACE9951C946CE300C34510 /* Main.storyboard */; };
@@ -33,6 +33,7 @@
 		E4DECC721C949A7300162F1A /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DECC711C949A7300162F1A /* MainTabBarController.m */; };
 		E4DECC741C949CCF00162F1A /* Question.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4DECC731C949CCF00162F1A /* Question.storyboard */; };
 		E4DECC781C94A94500162F1A /* Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DECC771C94A94500162F1A /* Networking.m */; };
+		F0C957001C95DA790051369D /* Encounter.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C956FF1C95DA790051369D /* Encounter.m */; };
 		F0EED0081C94AEE000AABE5A /* MedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EED0071C94AEE000AABE5A /* MedTableViewCell.m */; };
 		F0EED00B1C94B17500AABE5A /* Medication.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EED00A1C94B17500AABE5A /* Medication.m */; };
 		F0EED00E1C94CC1300AABE5A /* MedicationDVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EED00D1C94CC1300AABE5A /* MedicationDVViewController.m */; };
@@ -48,8 +49,6 @@
 		514919AE1C94AEF100DC6749 /* InfoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoTableViewController.h; sourceTree = "<group>"; };
 		514919AF1C94AEF100DC6749 /* InfoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoTableViewController.m; sourceTree = "<group>"; };
 		792CCB66C97674785738FB6A /* libPods-Discharge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Discharge.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A0DE5A91C949E1400559440 /* ContactNumbersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactNumbersViewController.h; sourceTree = "<group>"; };
-		9A0DE5AA1C949E1400559440 /* ContactNumbersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactNumbersViewController.m; sourceTree = "<group>"; };
 		E409395B1C94706800519F90 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		E409395C1C94706800519F90 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		E40939611C94728400519F90 /* Authorization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Authorization.h; sourceTree = "<group>"; };
@@ -63,6 +62,8 @@
 		E43DCEA51C95BB950060D5F1 /* Intro.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Intro.storyboard; sourceTree = "<group>"; };
 		E43DCEAA1C95BFDD0060D5F1 /* BarcodeSlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarcodeSlideViewController.h; sourceTree = "<group>"; };
 		E43DCEAB1C95BFDD0060D5F1 /* BarcodeSlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarcodeSlideViewController.m; sourceTree = "<group>"; };
+		E4761F481C95D89E00D25D2C /* ContactsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsTableViewController.h; sourceTree = "<group>"; };
+		E4761F491C95D89E00D25D2C /* ContactsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsTableViewController.m; sourceTree = "<group>"; };
 		E4ACE9861C946CE300C34510 /* Discharge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Discharge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4ACE98A1C946CE300C34510 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E4ACE98C1C946CE300C34510 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -85,6 +86,8 @@
 		E4DECC731C949CCF00162F1A /* Question.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Question.storyboard; sourceTree = "<group>"; };
 		E4DECC761C94A94500162F1A /* Networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
 		E4DECC771C94A94500162F1A /* Networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Networking.m; sourceTree = "<group>"; };
+		F0C956FE1C95DA790051369D /* Encounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Encounter.h; sourceTree = "<group>"; };
+		F0C956FF1C95DA790051369D /* Encounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Encounter.m; sourceTree = "<group>"; };
 		F0EED0061C94AEE000AABE5A /* MedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedTableViewCell.h; sourceTree = "<group>"; };
 		F0EED0071C94AEE000AABE5A /* MedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedTableViewCell.m; sourceTree = "<group>"; };
 		F0EED0091C94B17500AABE5A /* Medication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Medication.h; sourceTree = "<group>"; };
@@ -158,10 +161,14 @@
 			children = (
 				E43DCE9E1C94C82D0060D5F1 /* CommunicationTableViewController.h */,
 				E43DCE9F1C94C82D0060D5F1 /* CommunicationTableViewController.m */,
+				F0C956FE1C95DA790051369D /* Encounter.h */,
+				F0C956FF1C95DA790051369D /* Encounter.m */,
 				4D15E35D1C94F76D00A034EA /* CommunicationTableViewCell.h */,
 				4D15E35E1C94F76D00A034EA /* CommunicationTableViewCell.m */,
 				4D7FAB601C951DD6008C691B /* ContactTableViewCell.h */,
 				4D7FAB611C951DD6008C691B /* ContactTableViewCell.m */,
+				E4761F481C95D89E00D25D2C /* ContactsTableViewController.h */,
+				E4761F491C95D89E00D25D2C /* ContactsTableViewController.m */,
 			);
 			name = Communication;
 			sourceTree = "<group>";
@@ -204,8 +211,6 @@
 				E40939601C94708800519F90 /* LoginView */,
 				E4ACE98C1C946CE300C34510 /* AppDelegate.h */,
 				E4ACE98D1C946CE300C34510 /* AppDelegate.m */,
-				9A0DE5A91C949E1400559440 /* ContactNumbersViewController.h */,
-				9A0DE5AA1C949E1400559440 /* ContactNumbersViewController.m */,
 				E4ACE9981C946CE300C34510 /* Assets.xcassets */,
 				E4ACE99A1C946CE300C34510 /* LaunchScreen.storyboard */,
 				E4ACE99D1C946CE300C34510 /* Info.plist */,
@@ -410,15 +415,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				E43DCEA41C94D4400060D5F1 /* QuestionTableViewController.m in Sources */,
-				9A0DE5AB1C949E1400559440 /* ContactNumbersViewController.m in Sources */,
 				E409396B1C94768700519F90 /* User.m in Sources */,
 				E4DECC781C94A94500162F1A /* Networking.m in Sources */,
 				E4DECC581C947F1B00162F1A /* UIView+LayoutExtension.m in Sources */,
 				F0EED0081C94AEE000AABE5A /* MedTableViewCell.m in Sources */,
 				E4DECC721C949A7300162F1A /* MainTabBarController.m in Sources */,
 				E4ACE98E1C946CE300C34510 /* AppDelegate.m in Sources */,
+				E4761F4A1C95D89E00D25D2C /* ContactsTableViewController.m in Sources */,
 				E4DECC5F1C94866C00162F1A /* NavController.m in Sources */,
 				F0EED00E1C94CC1300AABE5A /* MedicationDVViewController.m in Sources */,
+				F0C957001C95DA790051369D /* Encounter.m in Sources */,
 				514919B01C94AEF100DC6749 /* InfoTableViewController.m in Sources */,
 				E4ACE98B1C946CE300C34510 /* main.m in Sources */,
 				E409395E1C94706800519F90 /* LoginViewController.m in Sources */,

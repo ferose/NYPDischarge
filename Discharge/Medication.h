@@ -12,5 +12,8 @@
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSString *dosage;
 @property (nonatomic) NSString *frequency;
+@property (nonatomic) NSString *cause;
+@property (nonatomic) NSString *instructions;
+
 
 @end

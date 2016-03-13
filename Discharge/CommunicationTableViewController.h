@@ -11,9 +11,10 @@
 @interface CommunicationTableViewController : UITableViewController
 
 @property (nonatomic) NSArray *image;
-@property (nonatomic) NSArray *treatment;
-@property (nonatomic) NSArray *time; 
-@property (nonatomic) NSArray *date;
+@property (nonatomic) NSMutableArray *encounters;
+//@property (nonatomic) NSArray *treatment;
+//@property (nonatomic) NSArray *time; 
+//@property (nonatomic) NSArray *date;
 
 
 

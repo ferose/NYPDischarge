@@ -138,7 +138,7 @@
     
 #if TARGET_IPHONE_SIMULATOR
     if (currentPage == self.introVCs.count-1) {
-        [self attemptLogin:@"asdf"];
+        [self attemptLogin:@"56cb4093b5d8bf3b55f5a220"];
     }
 #endif
 }
