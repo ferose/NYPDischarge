@@ -12,7 +12,8 @@
 
 @property (strong, nonatomic) IBOutlet UIImageView *customImageView;
 @property (strong, nonatomic) IBOutlet UILabel *labelDate;
-@property (strong, nonatomic) IBOutlet NSLayoutConstraint *labelTime;
+@property (weak, nonatomic) IBOutlet UILabel *labelTime;
+
 @property (strong, nonatomic) IBOutlet UILabel *labelTreatment;
 
 @end

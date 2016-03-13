@@ -54,6 +54,8 @@
             NSString *finalDateString = [weekdayString stringByAppendingString:[dateF stringFromDate:formattedDateString]];
             encounterObject.date = finalDateString;
             encounterObject.cause = [[encounter objectForKey:@"resource"] objectForKey:@"class"];
+            encounterObject.doctor = [[[[[encounter objectForKey:@"resource"] objectForKey:@"participant"] firstObject] objectForKey:@"individual"] objectForKey:@"display"];
+            
             [self.encounters addObject:encounterObject];
             
             [self.tableView reloadData];
@@ -117,6 +119,7 @@ UITableViewCell *cell = nil;
         cell2.customImageView.image = [UIImage imageNamed:self.image[indexPath.row%3]];
         cell2.labelDate.text = obj.date;
         cell2.labelTreatment.text = obj.cause;
+        cell2.labelTime.text = obj.doctor;
         return cell2;
     
     }

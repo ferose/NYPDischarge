@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UIView *buttonCall;
 @property (weak, nonatomic) IBOutlet UIView *buttonEmail;
 @property (weak, nonatomic) IBOutlet UIButton *buttonSearch;
+@property (weak, nonatomic) IBOutlet UIButton *buttonSync;
 
 @end

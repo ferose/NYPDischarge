@@ -21,6 +21,7 @@
  self.buttonCall.layer.cornerRadius = 4.0f;
     self.buttonEmail.layer.cornerRadius = 4.0f;
     self.buttonSearch.layer.cornerRadius = 4.0f;
+     self.buttonSync.layer.cornerRadius = 4.0f;
     
     
 }

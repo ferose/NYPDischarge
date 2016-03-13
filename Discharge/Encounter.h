@@ -11,4 +11,5 @@
 @interface Encounter : NSObject
 @property (nonatomic) NSString * date;
 @property (nonatomic) NSString * cause;
+@property (nonatomic) NSString * doctor;
 @end
