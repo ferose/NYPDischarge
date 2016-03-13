@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		35C7D1D45A0F6259D94E3EE6 /* libPods-Discharge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 792CCB66C97674785738FB6A /* libPods-Discharge.a */; };
+		4D15E35F1C94F76D00A034EA /* CommunicationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D15E35E1C94F76D00A034EA /* CommunicationTableViewCell.m */; };
 		514919B01C94AEF100DC6749 /* InfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 514919AF1C94AEF100DC6749 /* InfoTableViewController.m */; };
 		9A0DE5AB1C949E1400559440 /* ContactNumbersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A0DE5AA1C949E1400559440 /* ContactNumbersViewController.m */; };
 		E409395E1C94706800519F90 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E409395C1C94706800519F90 /* LoginViewController.m */; };
@@ -37,6 +38,8 @@
 /* Begin PBXFileReference section */
 		4721794F8C24750EFA4CF649 /* Pods-Discharge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Discharge.release.xcconfig"; path = "Pods/Target Support Files/Pods-Discharge/Pods-Discharge.release.xcconfig"; sourceTree = "<group>"; };
 		4BE10EB9AC9BA299B46C7E30 /* Pods-Discharge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Discharge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Discharge/Pods-Discharge.debug.xcconfig"; sourceTree = "<group>"; };
+		4D15E35D1C94F76D00A034EA /* CommunicationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommunicationTableViewCell.h; sourceTree = "<group>"; };
+		4D15E35E1C94F76D00A034EA /* CommunicationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommunicationTableViewCell.m; sourceTree = "<group>"; };
 		514919AE1C94AEF100DC6749 /* InfoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoTableViewController.h; sourceTree = "<group>"; };
 		514919AF1C94AEF100DC6749 /* InfoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoTableViewController.m; sourceTree = "<group>"; };
 		792CCB66C97674785738FB6A /* libPods-Discharge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Discharge.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +148,8 @@
 			children = (
 				E43DCE9E1C94C82D0060D5F1 /* CommunicationTableViewController.h */,
 				E43DCE9F1C94C82D0060D5F1 /* CommunicationTableViewController.m */,
+				4D15E35D1C94F76D00A034EA /* CommunicationTableViewCell.h */,
+				4D15E35E1C94F76D00A034EA /* CommunicationTableViewCell.m */,
 			);
 			name = Communication;
 			sourceTree = "<group>";
@@ -405,6 +410,7 @@
 				E4ACE98B1C946CE300C34510 /* main.m in Sources */,
 				E409395E1C94706800519F90 /* LoginViewController.m in Sources */,
 				E4DECC661C9487EF00162F1A /* MedsMasterTableViewController.m in Sources */,
+				4D15E35F1C94F76D00A034EA /* CommunicationTableViewCell.m in Sources */,
 				F0EED00B1C94B17500AABE5A /* Medication.m in Sources */,
 				E40939631C94728400519F90 /* Authorization.m in Sources */,
 				E43DCEA01C94C82D0060D5F1 /* CommunicationTableViewController.m in Sources */,

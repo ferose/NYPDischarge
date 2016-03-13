@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Unknown constraint types" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Appointments-->
@@ -19,76 +20,14 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="109"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3n0-bT-L6R" id="74V-cE-lmG">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="108"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="108.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Wh-ri-AGg">
                                             <rect key="frame" x="4" y="0.0" width="592" height="80"/>
-                                            <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Fg2-UG-Lu9">
-                                                    <rect key="frame" x="15" y="10" width="562" height="80"/>
-                                                    <subviews>
-                                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5c-sT-cyR">
-                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="80"/>
-                                                            <color key="backgroundColor" red="0.8666666666666667" green="0.29411764705882354" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="80" id="gNP-lA-esa"/>
-                                                                <constraint firstAttribute="width" constant="100" id="o01-Mq-dz3"/>
-                                                            </constraints>
-                                                            <state key="normal" image="Classicphone"/>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                    <integer key="value" value="5"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
-                                                            <connections>
-                                                                <action selector="buttonTappedCall:" destination="CjG-Qb-P2U" eventType="touchUpInside" id="wlb-fk-fjC"/>
-                                                            </connections>
-                                                        </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLj-Kw-Xda">
-                                                            <rect key="frame" x="231" y="0.0" width="100" height="80"/>
-                                                            <color key="backgroundColor" red="0.8666666666666667" green="0.29411764705882354" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="80" id="3UL-d5-ERG"/>
-                                                                <constraint firstAttribute="width" constant="100" id="sqh-vt-VrX"/>
-                                                            </constraints>
-                                                            <state key="normal" image="Wirelessmail "/>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                    <integer key="value" value="5"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
-                                                            <connections>
-                                                                <action selector="buttonTappedEmail:" destination="CjG-Qb-P2U" eventType="touchUpInside" id="Wox-2w-m71"/>
-                                                            </connections>
-                                                        </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8J-yE-4Yu">
-                                                            <rect key="frame" x="462" y="0.0" width="100" height="80"/>
-                                                            <color key="backgroundColor" red="0.8666666666666667" green="0.29411764705882354" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="100" id="XUm-sS-24Y"/>
-                                                                <constraint firstAttribute="height" constant="80" id="dYI-zj-R2G"/>
-                                                            </constraints>
-                                                            <state key="normal" image="Phonebook"/>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                    <integer key="value" value="5"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
-                                                            <connections>
-                                                                <action selector="buttonTappedDirectory:" destination="CjG-Qb-P2U" eventType="touchUpInside" id="ZN5-em-3Gt"/>
-                                                            </connections>
-                                                        </button>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="80" id="DGZ-bT-z7v"/>
-                                                    </constraints>
-                                                </stackView>
-                                            </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="Fg2-UG-Lu9" secondAttribute="trailing" constant="15" id="27F-Y1-rs5"/>
-                                                <constraint firstItem="Fg2-UG-Lu9" firstAttribute="leading" secondItem="7Wh-ri-AGg" secondAttribute="leading" constant="15" id="4sc-Mo-bQl"/>
-                                                <constraint firstItem="Fg2-UG-Lu9" firstAttribute="top" secondItem="7Wh-ri-AGg" secondAttribute="top" constant="10" id="KjG-AE-61F"/>
+                                                <constraint firstAttribute="leading" secondItem="7Wh-ri-AGg" secondAttribute="leading" constant="15" id="4sc-Mo-bQl"/>
+                                                <constraint firstAttribute="top" secondItem="7Wh-ri-AGg" secondAttribute="top" constant="10" id="KjG-AE-61F"/>
                                                 <constraint firstAttribute="height" constant="80" id="qMF-U6-crr"/>
                                             </constraints>
                                         </view>
@@ -104,7 +43,7 @@
                                 <rect key="frame" x="0.0" y="201" width="600" height="109"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="15O-TL-3in" id="Gh4-tC-Jy2">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="108"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="108.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zD6-db-U4m">
@@ -117,19 +56,19 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monday, March 14, 2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="cYt-4L-XOW">
                                             <rect key="frame" x="96" y="8" width="481" height="24"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:15 am at NY Presbyterian Hospital" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="mxk-LM-RTY">
                                             <rect key="frame" x="96" y="38" width="481" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blood Tests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="5uK-BV-Yip">
                                             <rect key="frame" x="96" y="67" width="481" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -184,7 +123,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Milstein Hospital" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMt-xB-OXk">
                                         <rect key="frame" x="221" y="8" width="127" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1P-bE-vEP">
@@ -258,7 +197,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allen Pavilion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uav-A6-mJ3">
                                         <rect key="frame" x="234" y="8" width="101" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" tag="6" contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJE-Ld-SoF">
@@ -346,7 +285,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MSCHONY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSp-vZ-T3d">
                                         <rect key="frame" x="242" y="8" width="85" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" tag="9" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czU-j5-whO">
@@ -455,9 +394,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Classicphone" width="60" height="60"/>
         <image name="Notifications" width="22" height="22"/>
-        <image name="Phonebook" width="60" height="60"/>
-        <image name="Wirelessmail " width="60" height="60"/>
     </resources>
 </document>

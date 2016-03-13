@@ -10,7 +10,6 @@
 
 @interface CommunicationTableViewController ()
 
-@property (nonatomic) NSArray *image;
 
 
 @end
@@ -26,7 +25,6 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.image = @[@"1", @"2", @"3", @"4"];
     
     
     
