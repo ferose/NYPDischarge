@@ -12,5 +12,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *drugName;
 @property (weak, nonatomic) IBOutlet UILabel *dosage;
 @property (weak, nonatomic) IBOutlet UILabel *frequency;
+@property (weak, nonatomic) IBOutlet UIImageView *drugImage;
 
 @end
