@@ -84,7 +84,7 @@
     
     if (indexPath.section == 0) {
         cell = [tableView dequeueReusableCellWithIdentifier:@"CummunicationsCell" forIndexPath:indexPath];
-        
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     else if (indexPath.section == 1) {
         cell = [tableView dequeueReusableCellWithIdentifier:@"AppointmentCell" forIndexPath:indexPath];
