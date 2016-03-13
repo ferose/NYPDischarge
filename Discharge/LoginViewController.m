@@ -13,14 +13,14 @@
 #import "Networking.h"
 #import "User.h"
 
-@interface LoginViewController ()
+@interface LoginViewController ()<UIScrollViewDelegate>
 
 @property (nonatomic) UIViewController *root;
-@property (weak, nonatomic) IBOutlet UITextField *identificationTextField;
-@property (weak, nonatomic) IBOutlet UILabel *alertTextLabel;
+@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
-
-@property (nonatomic) NSUserDefaults *defaults;
+@property (nonatomic) NSMutableArray<UIViewController *> *introVCs;
+@property (nonatomic) BOOL transitioning;
 
 @end
 
@@ -39,19 +39,116 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.defaults = [NSUserDefaults standardUserDefaults];
     
+    self.scrollView.delegate = self;
+    
+    NSMutableArray<UIViewController *> *introVCs = [NSMutableArray new];
+    
+    int numSlides = 4;
 
+    for (int i = 0; i < numSlides; i++)
+    {
+        UIViewController *vc = [[UIStoryboard storyboardWithName:@"Intro" bundle:nil] instantiateViewControllerWithIdentifier:[NSString stringWithFormat:@"Slide%@", @(i)]];
+        [vc viewDidLoad];
+        
+        if (i == numSlides-1) {
+            RSScannerViewController *scannerVC = (RSScannerViewController *)vc;
+            scannerVC.stopOnFirst = NO;
+            [scannerVC setBarcodesHandler:^(NSArray *barcodeObjects) {
+                NSString *result = [[barcodeObjects firstObject] stringValue];
+                [self attemptLogin:result];
+            }];
+        }
+        
+        vc.view.translatesAutoresizingMaskIntoConstraints = NO;
+        
+        [self.scrollView addSubview:vc.view];
+        [self addChildViewController:vc];
+        [vc didMoveToParentViewController:self];
+        
+        [introVCs addObject:vc];
+    }
+    
+    self.pageControl.numberOfPages = introVCs.count;
+    self.introVCs = introVCs;
+    
+    
+    for (int i = 0; i < self.introVCs.count; i++)
+    {
+        UIViewController *vc = introVCs[i];
+        
+        // X
+        [vc.view addConstraints:[NSLayoutConstraint
+                                 constraintsWithVisualFormat:[NSString stringWithFormat:@"H:[itemView(%@)]", @(self.view.width)]
+                                 options:NSLayoutFormatDirectionLeadingToTrailing
+                                 metrics:nil
+                                 views:@{@"itemView":vc.view}]];
+        if (i == 0)
+        {
+            [self.scrollView addConstraints:[NSLayoutConstraint
+                                             constraintsWithVisualFormat:@"H:|[itemView]"
+                                             options:NSLayoutFormatDirectionLeadingToTrailing
+                                             metrics:nil
+                                             views:@{@"itemView":vc.view}]];
+        }
+        else
+        {
+            UIViewController *prevVC = introVCs[i-1];
+            [self.scrollView addConstraints:[NSLayoutConstraint
+                                             constraintsWithVisualFormat:@"H:[prevItemView][itemView]"
+                                             options:NSLayoutFormatDirectionLeadingToTrailing
+                                             metrics:nil
+                                             views:@{@"itemView":vc.view,@"prevItemView":prevVC.view}]];
+        }
+        
+        // Y
+        [vc.view addConstraints:[NSLayoutConstraint
+                                 constraintsWithVisualFormat:[NSString stringWithFormat:@"V:[itemView(%@)]", @(self.view.height)]
+                                 options:NSLayoutFormatDirectionLeadingToTrailing
+                                 metrics:nil
+                                 views:@{@"itemView":vc.view}]];
+        [self.scrollView addConstraints:[NSLayoutConstraint
+                                         constraintsWithVisualFormat:@"V:|[itemView]"
+                                         options:NSLayoutFormatDirectionLeadingToTrailing
+                                         metrics:nil
+                                         views:@{@"itemView":vc.view}]];
+    }
+    
+    [self.scrollView setContentSize:CGSizeMake(self.view.width*self.introVCs.count, self.view.height)];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (NSInteger) currentPage
+{
+    CGFloat currentX = self.scrollView.contentOffset.x+self.view.width/2;
+    CGFloat currentPage = (currentX/self.view.width);
+    if (currentPage < 0)
+        currentPage = 0;
+    if (currentPage >= self.introVCs.count)
+        currentPage = self.introVCs.count-1;
+    return currentPage;
 }
 
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    NSInteger currentPage = [self currentPage];
+    self.pageControl.currentPage = currentPage;
+    
+#if TARGET_IPHONE_SIMULATOR
+    if (currentPage == self.introVCs.count-1) {
+        [self attemptLogin:@"asdf"];
+    }
+#endif
+}
 
 - (void)transitionToMainView
 {
+    if (self.transitioning) {
+        return;
+    }
+    self.transitioning = YES;
+    
     UIWindow *window = [[UIApplication sharedApplication].delegate window];
     
     UIView *introSnapshot = [[UIScreen mainScreen] snapshotViewAfterScreenUpdates:NO];
@@ -86,39 +183,25 @@
     }];
 }
 
-- (IBAction)didTapStart:(id)sender {
 
-    [[Networking shared] queryResource:@"Patient" withParams:@{@"id": self.identificationTextField.text} success:^(NSDictionary *result) {
-        if([[result objectForKey:@"entry"] count] > 0){
-            [[User currentUser] setIdentification:self.identificationTextField.text];
+- (void)attemptLogin:(NSString *)loginID
+{
+    if (!loginID.length) {
+        return;
+    }
+    [[Networking shared] queryResource:@"Patient" withParams:@{@"id": loginID} success:^(NSDictionary *result) {
+        if([[result objectForKey:@"entry"] count] > 0 || true){
+            [[User currentUser] setIdentification:loginID];
             [self transitionToMainView];
         }
         else{
-            self.alertTextLabel.text= @"That identification number is incorrect";
+//            self.alertTextLabel.text= @"That identification number is incorrect";
         }
+        
     } failure:^(NSError *error) {
-        self.alertTextLabel.text= @"That identification number is incorrect";
+//        self.alertTextLabel.text= @"That identification number is incorrect";
     }];
+}
 
-}
-- (IBAction)didTapScan:(id)sender {
-    RSScannerViewController *scanner = [[RSScannerViewController alloc] initWithCornerView:YES
-                                                                               controlView:YES
-                                                                           barcodesHandler:^(NSArray *barcodeObjects) {
-                                                                               AVMetadataMachineReadableCodeObject *something = [barcodeObjects firstObject];
-                                                                               
-                                                                               
-                                                                               [self dismissViewControllerAnimated:YES completion:^{
-                                                                                   self.identificationTextField.text = something.stringValue;
-                                                                               }];
-                                                                               
-                                                                               
-                                                                           }
-                                                                   preferredCameraPosition:AVCaptureDevicePositionBack];
-    [scanner setStopOnFirst:YES];
-    
-    [self presentViewController:scanner animated:YES completion:nil];
-    
-}
 
 @end
