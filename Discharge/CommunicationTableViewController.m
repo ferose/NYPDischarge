@@ -10,6 +10,9 @@
 
 @interface CommunicationTableViewController ()
 
+@property (nonatomic) NSArray *image;
+
+
 @end
 
 @implementation CommunicationTableViewController
@@ -22,12 +25,27 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.image = @[@"1", @"2", @"3", @"4"];
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+#pragma mark - buttons tapped
+
+- (IBAction)buttonTappedCall:(id)sender {
+}
+- (IBAction)buttonTappedEmail:(id)sender {
+}
+- (IBAction)buttonTappedDirectory:(id)sender {
+}
+
+
 
 #pragma mark - Table view data source
 
@@ -55,12 +73,19 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = nil;
+
     
     if (indexPath.section == 0) {
         cell = [tableView dequeueReusableCellWithIdentifier:@"CummunicationsCell" forIndexPath:indexPath];
+        
+//        [[self.buttonDirectory layer] setBorderWidth:2.0f];
+//        [self.buttonDirectory.layer setBorderColor:[UIColor blackColor].CGColor];
+        
     }
     else if (indexPath.section == 1) {
         cell = [tableView dequeueReusableCellWithIdentifier:@"AppointmentCell" forIndexPath:indexPath];
+        
+        
     }
     
     
