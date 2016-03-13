@@ -19,20 +19,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaq-j4-Z0j">
-                                <rect key="frame" x="279" y="28" width="42" height="21"/>
+                                <rect key="frame" x="279" y="28" width="42" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyi-Hs-7tz">
-                                <rect key="frame" x="283" y="285" width="34" height="30"/>
-                                <state key="normal" title="Start"/>
-                                <connections>
-                                    <action selector="didTapStart:" destination="2ZQ-FH-x10" eventType="touchUpInside" id="8G9-rp-ba0"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kWc-oS-YXq">
-                                <rect key="frame" x="283" y="323" width="35" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kWc-oS-YXq">
+                                <rect key="frame" x="300.5" y="332" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -65,13 +58,35 @@
                                     <constraint firstItem="CSA-pE-zOH" firstAttribute="top" secondItem="CQB-MX-ufB" secondAttribute="top" id="SsZ-wu-TnL"/>
                                 </constraints>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NYP_logo" translatesAutoresizingMaskIntoConstraints="NO" id="8QU-Bp-gdI">
+                                <rect key="frame" x="260" y="167" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="HwJ-WF-ct7"/>
+                                    <constraint firstAttribute="width" constant="80" id="YFV-xT-1Kt"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyi-Hs-7tz">
+                                <rect key="frame" x="245" y="277" width="111" height="45"/>
+                                <color key="backgroundColor" red="0.86666666670000003" green="0.29411764709999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="4M2-Cc-MnP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="     START     ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapStart:" destination="2ZQ-FH-x10" eventType="touchUpInside" id="8G9-rp-ba0"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="kWc-oS-YXq" firstAttribute="top" secondItem="dyi-Hs-7tz" secondAttribute="bottom" constant="10" id="4fV-DL-CaX"/>
                             <constraint firstItem="got-E2-uhd" firstAttribute="top" secondItem="dyi-Hs-7tz" secondAttribute="bottom" constant="8" id="8OV-35-g47"/>
                             <constraint firstItem="kWc-oS-YXq" firstAttribute="centerX" secondItem="IH6-FB-dIy" secondAttribute="centerX" id="BIR-ka-1gW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CQB-MX-ufB" secondAttribute="trailing" id="CWU-IF-e70"/>
+                            <constraint firstItem="8QU-Bp-gdI" firstAttribute="centerX" secondItem="IH6-FB-dIy" secondAttribute="centerX" id="Hx0-L6-25K"/>
+                            <constraint firstItem="dyi-Hs-7tz" firstAttribute="top" secondItem="8QU-Bp-gdI" secondAttribute="bottom" constant="30" id="KbB-Vd-qh1"/>
                             <constraint firstItem="CQB-MX-ufB" firstAttribute="top" secondItem="oaq-j4-Z0j" secondAttribute="bottom" id="NNT-Wa-s4Y"/>
                             <constraint firstItem="oaq-j4-Z0j" firstAttribute="centerX" secondItem="IH6-FB-dIy" secondAttribute="centerX" id="gwg-32-8Kk"/>
                             <constraint firstItem="dyi-Hs-7tz" firstAttribute="centerY" secondItem="IH6-FB-dIy" secondAttribute="centerY" id="jgh-Yf-17h"/>
@@ -113,4 +128,7 @@
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NYP_logo" width="186" height="186"/>
+    </resources>
 </document>
