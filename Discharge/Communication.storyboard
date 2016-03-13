@@ -27,15 +27,18 @@
                                             <color key="backgroundColor" red="0.86666666670000003" green="0.29411764709999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <state key="normal" image="Wirelessmail "/>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDD-xz-3FY">
-                                            <rect key="frame" x="414" y="13" width="168" height="82"/>
-                                            <color key="backgroundColor" red="0.86666666670000003" green="0.29411764709999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
-                                            <state key="normal" image="Phonebook"/>
-                                        </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8MT-TJ-pd6">
                                             <rect key="frame" x="18" y="13" width="168" height="82"/>
                                             <color key="backgroundColor" red="0.86666666670000003" green="0.29411764709999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <state key="normal" image="Phonesignal"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDD-xz-3FY">
+                                            <rect key="frame" x="414" y="13" width="168" height="82"/>
+                                            <color key="backgroundColor" red="0.86666666670000003" green="0.29411764709999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <state key="normal" image="Phonebook"/>
+                                            <connections>
+                                                <segue destination="iKC-jS-QJU" kind="show" id="10z-Q9-TlF"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -121,13 +124,7 @@
                             <outlet property="delegate" destination="CjG-Qb-P2U" id="2Z8-5B-Ucw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Appointments" id="BGf-Cd-3eh">
-                        <barButtonItem key="rightBarButtonItem" title="Contact" id="mVA-Wh-PHr">
-                            <connections>
-                                <segue destination="iKC-jS-QJU" kind="show" id="3of-Bf-d3s"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Appointments" id="BGf-Cd-3eh"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fNO-nf-x7S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -400,7 +397,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="01t-Ph-FY6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="878" y="1228"/>
+            <point key="canvasLocation" x="588" y="1228"/>
         </scene>
         <!--Comm-->
         <scene sceneID="y8h-Zp-vJG">
