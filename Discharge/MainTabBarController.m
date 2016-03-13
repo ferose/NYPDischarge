@@ -27,6 +27,10 @@
     
     
     self.tabBar.tintColor = [UIColor blackColor];
+    
+
+    
+    
 
 }
 

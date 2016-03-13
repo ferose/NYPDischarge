@@ -109,7 +109,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="imageView" destination="zD6-db-U4m" id="MF1-Rk-hhH"/>
+                                    <outlet property="imageView" destination="zD6-db-U4m" id="BZM-hs-6YY"/>
+                                    <outlet property="labelDate" destination="cYt-4L-XOW" id="Wuf-ax-Lxs"/>
+                                    <outlet property="labelTime" destination="eY5-f0-2Vc" id="URA-XB-fY4"/>
+                                    <outlet property="labelTreatment" destination="5uK-BV-Yip" id="RWR-Qc-dfJ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

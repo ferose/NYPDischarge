@@ -7,6 +7,8 @@
 //
 
 #import "CommunicationTableViewController.h"
+#import "CommunicationTableViewCell.h"
+#import "ContactTableViewCell.h"
 
 @interface CommunicationTableViewController ()
 
@@ -20,13 +22,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    // dummy data:
+    self.image = @[@"1", @"2", @"3", @"4", @"5"];
+    self.date = @[@"Monday, March 14, 2016",
+                  @"Wednesday, March 16, 2016",
+                  @"Thursday, March 31, 2016",
+                  @"Monday, April 4, 2016",
+                  @"Monday, April 4, 2016",
+                  @"Tuesday, April 5, 2016"];
+    self.time = @[@"4:00pm",
+                  @"11:15am",
+                  @"3:45pm",
+                  @"11:05am",
+                  @"4:30pm",
+                  @"2:20pm"];
+    self.treatment = @[@"Blood Tests with Dr. Dorian",
+                       @"Examination with Dr. Scully",
+                       @"Allergy Test with Dr. Evil",
+                       @"Vaccination with Dr. Quinn",
+                       @"Blood Tests with Dr. Spock",
+                       @"X-Rays with Dr. Mario"];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-        self.image = @[@"1", @"2", @"3", @"4", @"5"];
+    
     
     
 }
@@ -71,8 +89,10 @@
     else if (indexPath.section == 1) {
         cell = [tableView dequeueReusableCellWithIdentifier:@"AppointmentCell" forIndexPath:indexPath];
         
+        // dummy data:
         NSInteger row = [indexPath row];
-        cell.imageView.image = [UIImage imageNamed:self.image[row]]; // dummy image
+        cell.imageView.image = [UIImage imageNamed:self.image[row]];
+    
     }
     
     

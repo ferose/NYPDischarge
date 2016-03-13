@@ -10,6 +10,9 @@
 
 @interface CommunicationTableViewCell : UITableViewCell
 
-@property (strong) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) IBOutlet UILabel *labelDate;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *labelTime;
+@property (strong, nonatomic) IBOutlet UILabel *labelTreatment;
 
 @end
