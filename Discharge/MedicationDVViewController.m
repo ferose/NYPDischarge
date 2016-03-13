@@ -15,7 +15,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *drugName;
 @property (weak, nonatomic) IBOutlet UILabel *dosage;
 @property (weak, nonatomic) IBOutlet UILabel *frequency;
+@property (weak, nonatomic) IBOutlet UITextView *instruction;
 @property (weak, nonatomic) IBOutlet UIImageView *drugImage;
+@property (weak, nonatomic) IBOutlet UITextView *cause;
 @end
 
 
@@ -26,6 +28,8 @@
     self.drugName.text = self.medication.name;
     self.dosage.text = self.medication.dosage;
     self.frequency.text = self.medication.frequency;
+    self.cause.text = self.medication.cause;
+    self.instruction.text = self.medication.instructions;
     
     [self makeImageAPICall:self.medication.name];
     
