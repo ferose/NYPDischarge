@@ -68,6 +68,8 @@
                 
                 NSString *newURL = [NSString stringWithFormat:@"https://navhealth.herokuapp.com/api/fhir/%@", medURL];
                 
+                NSLog(@"New URL:%@",newURL);
+                
                 [self.manager GET:newURL parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
                     NSLog(@"progress");
                 } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
