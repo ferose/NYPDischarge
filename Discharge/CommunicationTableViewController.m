@@ -23,7 +23,7 @@
     [super viewDidLoad];
     
     // dummy data:
-    self.image = @[@"1", @"2", @"3", @"4", @"5"];
+    self.image = @[@"0", @"1", @"2", @"3", @"4", @"5"];
     self.date = @[@"Monday, March 14, 2016",
                   @"Wednesday, March 16, 2016",
                   @"Thursday, March 31, 2016",
@@ -84,7 +84,7 @@
     
     if (indexPath.section == 0) {
         cell = [tableView dequeueReusableCellWithIdentifier:@"CummunicationsCell" forIndexPath:indexPath];
-        
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     else if (indexPath.section == 1) {
         cell = [tableView dequeueReusableCellWithIdentifier:@"AppointmentCell" forIndexPath:indexPath];

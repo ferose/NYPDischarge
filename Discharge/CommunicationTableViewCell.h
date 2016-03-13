@@ -16,3 +16,4 @@
 @property (strong, nonatomic) IBOutlet UILabel *labelTreatment;
 
 @end
+ 
