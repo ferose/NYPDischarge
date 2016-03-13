@@ -58,7 +58,7 @@
             encounterObject.date = finalDateString;
             encounterObject.cause = [[encounter objectForKey:@"resource"] objectForKey:@"class"];
             [self.encounters addObject:encounterObject];
-            \
+            NSLog(@"%@", encounterObject);
             [self.tableView reloadData];
         }
         
