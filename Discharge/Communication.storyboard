@@ -33,7 +33,7 @@
                                                         <constraint firstAttribute="height" constant="80" id="uAM-Pf-qNs"/>
                                                     </constraints>
                                                 </view>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8MT-TJ-pd6">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8MT-TJ-pd6">
                                                     <rect key="frame" x="56" y="0.0" width="80" height="80"/>
                                                     <color key="backgroundColor" red="0.86666666670000003" green="0.29411764709999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
@@ -42,7 +42,7 @@
                                                     </constraints>
                                                     <state key="normal" image="Phonesignal"/>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1z-NH-62w">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1z-NH-62w">
                                                     <rect key="frame" x="192" y="0.0" width="80" height="80"/>
                                                     <color key="backgroundColor" red="0.86666666670000003" green="0.29411764709999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
@@ -51,7 +51,7 @@
                                                     </constraints>
                                                     <state key="normal" image="Wirelessmail "/>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDD-xz-3FY">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDD-xz-3FY">
                                                     <rect key="frame" x="328" y="0.0" width="80" height="80"/>
                                                     <color key="backgroundColor" red="0.86666666670000003" green="0.29411764709999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
@@ -63,7 +63,7 @@
                                                         <segue destination="aNi-aV-MKq" kind="show" id="ldf-cq-wSh"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajN-H4-mdF">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajN-H4-mdF">
                                                     <rect key="frame" x="464" y="0.0" width="80" height="80"/>
                                                     <color key="backgroundColor" red="0.86666666670000003" green="0.29411764709999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
@@ -103,7 +103,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="108.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zD6-db-U4m">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zD6-db-U4m">
                                             <rect key="frame" x="18" y="8" width="80" height="80"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="80" id="P5r-3b-dKN"/>
@@ -144,7 +144,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="imageView" destination="zD6-db-U4m" id="BZM-hs-6YY"/>
+                                    <outlet property="customImageView" destination="zD6-db-U4m" id="84N-Qu-tbj"/>
                                     <outlet property="labelDate" destination="cYt-4L-XOW" id="Wuf-ax-Lxs"/>
                                     <outlet property="labelTime" destination="eY5-f0-2Vc" id="URA-XB-fY4"/>
                                     <outlet property="labelTreatment" destination="5uK-BV-Yip" id="RWR-Qc-dfJ"/>
