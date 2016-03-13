@@ -108,6 +108,7 @@ UITableViewCell *cell = nil;
     if (indexPath.section == 0) {
         
         cell = [tableView dequeueReusableCellWithIdentifier:@"CummunicationsCell" forIndexPath:indexPath];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }
     else if (indexPath.section == 1) {
