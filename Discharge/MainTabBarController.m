@@ -26,9 +26,13 @@
     self.viewControllers = @[communication, medication, info, question];
     
     
-    self.tabBar.tintColor = [UIColor blackColor];
+    self.tabBar.tintColor = [UIColor whiteColor];
     
 
+    [[UITabBarItem appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName : [UIColor blackColor] } forState:UIControlStateNormal];
+    
+    [[UITabBarItem appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName : [UIColor whiteColor] } forState:UIControlStateSelected];
+    
     
     
 
