@@ -49,7 +49,7 @@
     [self.medications removeAllObjects];
     
     [[Networking shared] queryResource:@"MedicationOrder" withParams:nil success:^(NSDictionary *json) {
-        NSLog(@"%@", json);
+
         if ([[json objectForKey:@"entry"] count] > 0) {
             for (NSDictionary* med in [json objectForKey:@"entry"]) {
                 Medication *medication = [[Medication alloc] init];
@@ -65,7 +65,15 @@
                 medication.dosage = dosage;
                 medication.frequency = frequency;
                 
-
+                NSLog(@"%@", dosageInstruction);
+                NSString *instructions = [[[[dosageInstruction objectForKey:@"route"] objectForKey:@"coding"] firstObject] objectForKey:@"display"];
+                
+                instructions = [instructions stringByAppendingString:[NSString stringWithFormat:@" \n%@", [[dosageInstruction objectForKey:@"additionalInstructions"] objectForKey:@"text"]]];
+                
+                medication.cause = [[[med objectForKey:@"resource"] objectForKey:@"reasonCodeableConcept"] objectForKey:@"text"];
+                
+                medication.instructions = instructions;
+                
                 NSString *drugName = [[[med objectForKey:@"resource"] objectForKey:@"medicationCodeableConcept"] objectForKey:@"text"];
                 NSString *drugName2;
             
