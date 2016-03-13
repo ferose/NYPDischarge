@@ -13,7 +13,8 @@
 - (void)awakeFromNib {
     // Initialization code
     
-    self.image = @[@"1", @"2", @"3", @"4", @"5", @"6"];
+    self.imageView.layer.cornerRadius = 4.0f;
+    
     
     
 }

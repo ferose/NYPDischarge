@@ -10,6 +10,7 @@
 
 @interface CommunicationTableViewController : UITableViewController
 
+@property (nonatomic) NSArray *image;
 
 
 @end

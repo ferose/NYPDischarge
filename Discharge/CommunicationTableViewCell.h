@@ -10,6 +10,6 @@
 
 @interface CommunicationTableViewCell : UITableViewCell
 
-@property (nonatomic) NSArray *image;
+@property (strong) IBOutlet UIImageView *imageView;
 
 @end

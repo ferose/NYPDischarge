@@ -24,6 +24,10 @@
     NavController *question = [[UIStoryboard storyboardWithName:@"Question" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([NavController class])];
     // Do any additional setup after loading the view.
     self.viewControllers = @[communication, medication, info, question];
+    
+    
+    self.tabBar.tintColor = [UIColor blackColor];
+
 }
 
 - (void)didReceiveMemoryWarning {
