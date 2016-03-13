@@ -12,6 +12,7 @@
 #import <RSBarcodes/RSBarcodes.h>
 #import "Networking.h"
 #import "User.h"
+#import "ClusterPrePermissions.h"
 
 @interface LoginViewController ()<UIScrollViewDelegate>
 
@@ -180,9 +181,19 @@
         [introSnapshot removeFromSuperview];
         [blackView removeFromSuperview];
         [homeSnapshot removeFromSuperview];
+        
+        [self askPushNotifs];
     }];
 }
 
+- (void)askPushNotifs
+{
+    ClusterPrePermissions *permissions = [ClusterPrePermissions sharedPermissions];
+    [permissions showPushNotificationPermissionsWithType:ClusterPushNotificationTypeBadge|ClusterPushNotificationTypeSound|ClusterPushNotificationTypeAlert
+                                                   title:@"Pill notifications" message:@"Would you like to be notified when you need to take your pills?" denyButtonTitle:@"NO" grantButtonTitle:@"YES" completionHandler:^(BOOL hasPermission, ClusterDialogResult userDialogResult, ClusterDialogResult systemDialogResult) {
+                                                       
+                                                   }];
+}
 
 - (void)attemptLogin:(NSString *)loginID
 {
