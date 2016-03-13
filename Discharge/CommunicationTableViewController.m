@@ -27,10 +27,7 @@
     // dummy data:
     self.image = @[@"1", @"2", @"3", @"4", @"5"];
     self.encounters = [[NSMutableArray alloc] init];
-    
-    
-    
-    //https://navhealth.herokuapp.com/api/fhir/Encounter?patient=
+    NSLog(@"hi");
     
     [[Networking shared] queryResource:@"Encounter" withParams:nil success:^(NSDictionary *result) {
         for (NSDictionary *encounter in [result objectForKey:@"entry"]) {
@@ -58,7 +55,7 @@
             encounterObject.date = finalDateString;
             encounterObject.cause = [[encounter objectForKey:@"resource"] objectForKey:@"class"];
             [self.encounters addObject:encounterObject];
-            NSLog(@"%@", encounterObject);
+            
             [self.tableView reloadData];
         }
         
@@ -117,7 +114,7 @@ UITableViewCell *cell = nil;
         
         // dummy data:
         Encounter *obj = [self.encounters objectAtIndex:indexPath.row];
-        cell2.imageView.image = [UIImage imageNamed:self.image[indexPath.row]];
+        cell2.imageView.image = [UIImage imageNamed:self.image[indexPath.row%3]];
         cell2.labelDate.text = obj.date;
         cell2.labelTreatment.text = obj.cause;
         return cell2;

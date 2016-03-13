@@ -49,7 +49,7 @@
     [self.medications removeAllObjects];
     
     [[Networking shared] queryResource:@"MedicationOrder" withParams:nil success:^(NSDictionary *json) {
-        
+        NSLog(@"%@", json);
         if ([[json objectForKey:@"entry"] count] > 0) {
             for (NSDictionary* med in [json objectForKey:@"entry"]) {
                 Medication *medication = [[Medication alloc] init];
@@ -65,38 +65,22 @@
                 medication.dosage = dosage;
                 medication.frequency = frequency;
                 
-                NSString *medURL = [[[med objectForKey:@"resource"] objectForKey:@"medicationReference"] objectForKey:@"reference"];
+
+                NSString *drugName = [[[med objectForKey:@"resource"] objectForKey:@"medicationCodeableConcept"] objectForKey:@"text"];
+                NSString *drugName2;
+            
+                NSScanner *scanner = [NSScanner scannerWithString:drugName];
+                NSCharacterSet *numbers = [NSCharacterSet characterSetWithCharactersInString:@"0123456789"];
                 
-                NSString *newURL = [NSString stringWithFormat:@"https://navhealth.herokuapp.com/api/fhir/%@", medURL];
+                // Throw away characters before the first number.
+                [scanner scanUpToCharactersFromSet:numbers intoString:&drugName2];
                 
-                NSLog(@"New URL:%@",newURL);
                 
-                [self.manager GET:newURL parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-                    NSLog(@"progress");
-                } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                    NSError *error;
-                    NSDictionary *medData = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:&error];
-                    NSString *drugName = [[[[medData objectForKey:@"code"] objectForKey:@"coding"] firstObject] objectForKey:@"display"];
-                    NSString *drugName2;
-                    
-                    
-                    NSScanner *scanner = [NSScanner scannerWithString:drugName];
-                    NSCharacterSet *numbers = [NSCharacterSet characterSetWithCharactersInString:@"0123456789"];
-                    
-                    // Throw away characters before the first number.
-                    [scanner scanUpToCharactersFromSet:numbers intoString:&drugName2];
-                    
-                    
-                    medication.name = drugName2;
-                    
-                    [self.medications addObject:medication];
-                    
-                    [self.tableView reloadData];
-                    
-                    
-                } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                    NSLog(@"fail");
-                }];
+                medication.name = drugName2;
+                
+                [self.medications addObject:medication];
+                
+                [self.tableView reloadData];
                 
             }
             
