@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -15,47 +15,79 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CummunicationsCell" rowHeight="109" id="3n0-bT-L6R" customClass="ContactTableViewCell">
-                                <rect key="frame" x="0.0" y="92" width="600" height="109"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CummunicationsCell" rowHeight="80" id="3n0-bT-L6R" customClass="ContactTableViewCell">
+                                <rect key="frame" x="0.0" y="92" width="600" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3n0-bT-L6R" id="74V-cE-lmG">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="108.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1z-NH-62w">
-                                            <rect key="frame" x="216" y="13" width="168" height="82"/>
-                                            <color key="backgroundColor" red="0.86666666670000003" green="0.29411764709999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
-                                            <state key="normal" image="Wirelessmail "/>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8MT-TJ-pd6">
-                                            <rect key="frame" x="18" y="13" width="168" height="82"/>
-                                            <color key="backgroundColor" red="0.86666666670000003" green="0.29411764709999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
-                                            <state key="normal" image="Phonesignal"/>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDD-xz-3FY">
-                                            <rect key="frame" x="414" y="13" width="168" height="82"/>
-                                            <color key="backgroundColor" red="0.86666666670000003" green="0.29411764709999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
-                                            <state key="normal" image="Phonebook"/>
-                                            <connections>
-                                                <segue destination="aNi-aV-MKq" kind="show" id="ldf-cq-wSh"/>
-                                            </connections>
-                                        </button>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uE4-s5-Sfh">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="adc-Yt-etn">
+                                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" id="hMs-xG-MeJ"/>
+                                                        <constraint firstAttribute="height" constant="80" id="uAM-Pf-qNs"/>
+                                                    </constraints>
+                                                </view>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8MT-TJ-pd6">
+                                                    <rect key="frame" x="56" y="0.0" width="80" height="80"/>
+                                                    <color key="backgroundColor" red="0.86666666670000003" green="0.29411764709999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="9gG-iQ-Yl8"/>
+                                                        <constraint firstAttribute="height" constant="80" id="nm0-M8-WWP"/>
+                                                    </constraints>
+                                                    <state key="normal" image="Phonesignal"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1z-NH-62w">
+                                                    <rect key="frame" x="192" y="0.0" width="80" height="80"/>
+                                                    <color key="backgroundColor" red="0.86666666670000003" green="0.29411764709999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="5vw-yh-ctw"/>
+                                                        <constraint firstAttribute="width" constant="80" id="fMF-iK-RHu"/>
+                                                    </constraints>
+                                                    <state key="normal" image="Wirelessmail "/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDD-xz-3FY">
+                                                    <rect key="frame" x="328" y="0.0" width="80" height="80"/>
+                                                    <color key="backgroundColor" red="0.86666666670000003" green="0.29411764709999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="cjh-Ez-zZv"/>
+                                                        <constraint firstAttribute="height" constant="80" id="kuL-mE-Ln3"/>
+                                                    </constraints>
+                                                    <state key="normal" image="Phonebook"/>
+                                                    <connections>
+                                                        <segue destination="aNi-aV-MKq" kind="show" id="ldf-cq-wSh"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajN-H4-mdF">
+                                                    <rect key="frame" x="464" y="0.0" width="80" height="80"/>
+                                                    <color key="backgroundColor" red="0.86666666670000003" green="0.29411764709999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="7gC-FZ-u03"/>
+                                                        <constraint firstAttribute="width" constant="80" id="8NG-b7-icN"/>
+                                                    </constraints>
+                                                    <state key="normal" image="Phonebook"/>
+                                                </button>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mjb-65-Ld7">
+                                                    <rect key="frame" x="600" y="0.0" width="0.0" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="XVK-Ps-3KS"/>
+                                                        <constraint firstAttribute="width" id="Xcl-VV-9lS"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="e1z-NH-62w" firstAttribute="leading" secondItem="8MT-TJ-pd6" secondAttribute="trailing" constant="30" id="2Ea-6Y-4fh"/>
-                                        <constraint firstItem="e1z-NH-62w" firstAttribute="centerX" secondItem="74V-cE-lmG" secondAttribute="centerX" id="9MV-04-By9"/>
-                                        <constraint firstItem="8MT-TJ-pd6" firstAttribute="width" secondItem="e1z-NH-62w" secondAttribute="width" id="AVN-DC-mvR"/>
-                                        <constraint firstItem="e1z-NH-62w" firstAttribute="centerY" secondItem="74V-cE-lmG" secondAttribute="centerY" id="Nn4-RY-T5z"/>
-                                        <constraint firstItem="LDD-xz-3FY" firstAttribute="leading" secondItem="e1z-NH-62w" secondAttribute="trailing" constant="30" id="Qgc-CM-mKL"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="LDD-xz-3FY" secondAttribute="trailing" constant="10" id="Zce-RO-8gh"/>
-                                        <constraint firstItem="LDD-xz-3FY" firstAttribute="width" secondItem="e1z-NH-62w" secondAttribute="width" id="asn-hL-1nZ"/>
-                                        <constraint firstItem="8MT-TJ-pd6" firstAttribute="top" secondItem="e1z-NH-62w" secondAttribute="top" id="dWo-gc-6EW"/>
-                                        <constraint firstItem="8MT-TJ-pd6" firstAttribute="height" secondItem="e1z-NH-62w" secondAttribute="height" id="fbh-6R-32i"/>
-                                        <constraint firstItem="8MT-TJ-pd6" firstAttribute="leading" secondItem="74V-cE-lmG" secondAttribute="leadingMargin" constant="10" id="g9S-xV-70d"/>
-                                        <constraint firstItem="LDD-xz-3FY" firstAttribute="height" secondItem="e1z-NH-62w" secondAttribute="height" id="ox2-fI-7DW"/>
-                                        <constraint firstItem="LDD-xz-3FY" firstAttribute="top" secondItem="e1z-NH-62w" secondAttribute="top" id="rMd-0q-tKU"/>
-                                        <constraint firstItem="e1z-NH-62w" firstAttribute="top" secondItem="74V-cE-lmG" secondAttribute="topMargin" constant="5" id="uUa-Y2-N2s"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="e1z-NH-62w" secondAttribute="bottom" constant="5" id="zuP-u8-wFW"/>
+                                        <constraint firstItem="uE4-s5-Sfh" firstAttribute="top" secondItem="74V-cE-lmG" secondAttribute="top" id="6Ow-Ew-Cw1"/>
+                                        <constraint firstAttribute="trailing" secondItem="uE4-s5-Sfh" secondAttribute="trailing" id="6jh-Bm-rgV"/>
+                                        <constraint firstItem="uE4-s5-Sfh" firstAttribute="leading" secondItem="74V-cE-lmG" secondAttribute="leading" id="TGq-4R-etn"/>
+                                        <constraint firstAttribute="bottom" secondItem="uE4-s5-Sfh" secondAttribute="bottom" id="VrG-99-R7M"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -65,7 +97,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AppointmentCell" id="15O-TL-3in" customClass="CommunicationTableViewCell">
-                                <rect key="frame" x="0.0" y="201" width="600" height="109"/>
+                                <rect key="frame" x="0.0" y="172" width="600" height="109"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="15O-TL-3in" id="Gh4-tC-Jy2">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="108.5"/>
