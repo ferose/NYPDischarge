@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -23,10 +23,10 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uE4-s5-Sfh">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="81"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="82"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="adc-Yt-etn">
-                                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="81"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="82"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" id="hMs-xG-MeJ"/>
@@ -34,7 +34,7 @@
                                                     </constraints>
                                                 </view>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8MT-TJ-pd6">
-                                                    <rect key="frame" x="56" y="0.0" width="80" height="81"/>
+                                                    <rect key="frame" x="56" y="1" width="80" height="81"/>
                                                     <color key="backgroundColor" red="0.86666666670000003" green="0.29411764709999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="80" id="9gG-iQ-Yl8"/>
@@ -42,8 +42,8 @@
                                                     </constraints>
                                                     <state key="normal" image="Phonesignal"/>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1z-NH-62w">
-                                                    <rect key="frame" x="192" y="11" width="80" height="60"/>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1z-NH-62w">
+                                                    <rect key="frame" x="192" y="1" width="80" height="81"/>
                                                     <color key="backgroundColor" red="0.86666666670000003" green="0.29411764709999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="80" id="5vw-yh-ctw"/>
@@ -52,7 +52,7 @@
                                                     <state key="normal" image="Wirelessmail "/>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDD-xz-3FY">
-                                                    <rect key="frame" x="328" y="0.0" width="80" height="81"/>
+                                                    <rect key="frame" x="328" y="1" width="80" height="81"/>
                                                     <color key="backgroundColor" red="0.86666666670000003" green="0.29411764709999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="80" id="cjh-Ez-zZv"/>
@@ -64,7 +64,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajN-H4-mdF">
-                                                    <rect key="frame" x="464" y="0.0" width="80" height="81"/>
+                                                    <rect key="frame" x="464" y="1" width="80" height="81"/>
                                                     <color key="backgroundColor" red="0.86666666670000003" green="0.29411764709999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="80" id="7gC-FZ-u03"/>
@@ -72,8 +72,8 @@
                                                     </constraints>
                                                     <state key="normal" image="Notifications2"/>
                                                 </button>
-                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mjb-65-Ld7">
-                                                    <rect key="frame" x="600" y="0.0" width="0.0" height="81"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mjb-65-Ld7">
+                                                    <rect key="frame" x="600" y="1" width="0.0" height="81"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="80" id="XVK-Ps-3KS"/>
@@ -94,6 +94,7 @@
                                     <outlet property="buttonCall" destination="8MT-TJ-pd6" id="9oG-7k-dx5"/>
                                     <outlet property="buttonEmail" destination="e1z-NH-62w" id="agz-Ft-XF1"/>
                                     <outlet property="buttonSearch" destination="LDD-xz-3FY" id="KnY-Qq-NLW"/>
+                                    <outlet property="buttonSync" destination="ajN-H4-mdF" id="4hm-cn-Dxd"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AppointmentCell" id="15O-TL-3in" customClass="CommunicationTableViewCell">
@@ -146,7 +147,7 @@
                                 <connections>
                                     <outlet property="customImageView" destination="zD6-db-U4m" id="84N-Qu-tbj"/>
                                     <outlet property="labelDate" destination="cYt-4L-XOW" id="Wuf-ax-Lxs"/>
-                                    <outlet property="labelTime" destination="eY5-f0-2Vc" id="URA-XB-fY4"/>
+                                    <outlet property="labelTime" destination="mxk-LM-RTY" id="4V4-GZ-q3D"/>
                                     <outlet property="labelTreatment" destination="5uK-BV-Yip" id="RWR-Qc-dfJ"/>
                                     <segue destination="ZLh-Cm-mcf" kind="show" id="xyO-Yv-QUn"/>
                                 </connections>
