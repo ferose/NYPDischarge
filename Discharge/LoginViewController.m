@@ -190,7 +190,7 @@
 {
     ClusterPrePermissions *permissions = [ClusterPrePermissions sharedPermissions];
     [permissions showPushNotificationPermissionsWithType:ClusterPushNotificationTypeBadge|ClusterPushNotificationTypeSound|ClusterPushNotificationTypeAlert
-                                                   title:@"Pill notifications" message:@"Would you like to be notified when you need to take your pills?" denyButtonTitle:@"NO" grantButtonTitle:@"YES" completionHandler:^(BOOL hasPermission, ClusterDialogResult userDialogResult, ClusterDialogResult systemDialogResult) {
+                                                   title:@"Pill Notifications" message:@"Would you like to be notified when it's time to take your pills?" denyButtonTitle:@"NO" grantButtonTitle:@"YES" completionHandler:^(BOOL hasPermission, ClusterDialogResult userDialogResult, ClusterDialogResult systemDialogResult) {
                                                        
                                                    }];
 }
