@@ -15,6 +15,7 @@
 #import "Medication.h"
 #import "Networking.h"
 #import "MedicationDVViewController.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface MedsMasterTableViewController ()
 
@@ -67,6 +68,8 @@
                 NSString *medURL = [[[med objectForKey:@"resource"] objectForKey:@"medicationReference"] objectForKey:@"reference"];
                 
                 NSString *newURL = [NSString stringWithFormat:@"https://navhealth.herokuapp.com/api/fhir/%@", medURL];
+                
+                NSLog(@"New URL:%@",newURL);
                 
                 [self.manager GET:newURL parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
                     NSLog(@"progress");
@@ -189,6 +192,11 @@
     cell.drugName.text = med.name;
     cell.dosage.text = med.dosage;
     cell.frequency.text = med.frequency;
+    
+    [[Networking shared] imageURLForPillName:med.name completion:^(NSURL *imageURL) {
+        [cell.drugImage sd_setImageWithURL:imageURL];
+    }];
+
     // Configure the cell...
     
     return cell;

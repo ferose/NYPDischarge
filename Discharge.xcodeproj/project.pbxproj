@@ -234,6 +234,8 @@
 			children = (
 				E4DECC641C9487EF00162F1A /* MedsMasterTableViewController.h */,
 				E4DECC651C9487EF00162F1A /* MedsMasterTableViewController.m */,
+				F0EED00C1C94CC1300AABE5A /* MedicationDVViewController.h */,
+				F0EED00D1C94CC1300AABE5A /* MedicationDVViewController.m */,
 				F0EED0091C94B17500AABE5A /* Medication.h */,
 				F0EED00A1C94B17500AABE5A /* Medication.m */,
 			);
@@ -255,8 +257,6 @@
 				E4ACE9951C946CE300C34510 /* Main.storyboard */,
 				E4DECC6A1C94994D00162F1A /* Communication.storyboard */,
 				E4DECC6C1C94995C00162F1A /* Medication.storyboard */,
-				F0EED00C1C94CC1300AABE5A /* MedicationDVViewController.h */,
-				F0EED00D1C94CC1300AABE5A /* MedicationDVViewController.m */,
 				F0EED0061C94AEE000AABE5A /* MedTableViewCell.h */,
 				F0EED0071C94AEE000AABE5A /* MedTableViewCell.m */,
 				E4DECC6E1C94996F00162F1A /* Info.storyboard */,
