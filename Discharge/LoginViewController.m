@@ -31,7 +31,7 @@
     UIWindow *window = [[UIApplication sharedApplication].delegate window];
     UIViewController *root = window.rootViewController;
     
-    LoginViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([LoginViewController class])];
+    LoginViewController *vc = [[UIStoryboard storyboardWithName:@"Intro" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([LoginViewController class])];
     vc.root = root;
     
     window.rootViewController = vc;
