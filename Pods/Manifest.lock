@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.0.4)
   - AFNetworking/UIKit (3.0.4):
     - AFNetworking/NSURLSession
+  - ClusterPrePermissions (0.8.1)
   - RSBarcodes (0.1.4)
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
@@ -21,14 +22,16 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - ClusterPrePermissions (~> 0.1)
   - RSBarcodes (~> 0.1.4)
   - SDWebImage
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
+  ClusterPrePermissions: 168c127a658e423062550dd9c56fe26042a58bce
   RSBarcodes: 6b062b5aba3e75a5e889b2465ef1bb256215fbd0
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
 
-PODFILE CHECKSUM: 4d210de9cd02e85015c12c66ae1ed4771c4c2af3
+PODFILE CHECKSUM: bee4069d4399d87fccb164535c920cc40440cd21
 
 COCOAPODS: 1.0.0.beta.3

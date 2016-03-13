@@ -18,6 +18,7 @@
 		E43DCEA01C94C82D0060D5F1 /* CommunicationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E43DCE9F1C94C82D0060D5F1 /* CommunicationTableViewController.m */; };
 		E43DCEA41C94D4400060D5F1 /* QuestionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E43DCEA31C94D4400060D5F1 /* QuestionTableViewController.m */; };
 		E43DCEA61C95BB950060D5F1 /* Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E43DCEA51C95BB950060D5F1 /* Intro.storyboard */; };
+		E43DCEAC1C95BFDD0060D5F1 /* BarcodeSlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E43DCEAB1C95BFDD0060D5F1 /* BarcodeSlideViewController.m */; };
 		E4ACE98B1C946CE300C34510 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4ACE98A1C946CE300C34510 /* main.m */; };
 		E4ACE98E1C946CE300C34510 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4ACE98D1C946CE300C34510 /* AppDelegate.m */; };
 		E4ACE9971C946CE300C34510 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4ACE9951C946CE300C34510 /* Main.storyboard */; };
@@ -60,6 +61,8 @@
 		E43DCEA21C94D4400060D5F1 /* QuestionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionTableViewController.h; sourceTree = "<group>"; };
 		E43DCEA31C94D4400060D5F1 /* QuestionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionTableViewController.m; sourceTree = "<group>"; };
 		E43DCEA51C95BB950060D5F1 /* Intro.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Intro.storyboard; sourceTree = "<group>"; };
+		E43DCEAA1C95BFDD0060D5F1 /* BarcodeSlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarcodeSlideViewController.h; sourceTree = "<group>"; };
+		E43DCEAB1C95BFDD0060D5F1 /* BarcodeSlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarcodeSlideViewController.m; sourceTree = "<group>"; };
 		E4ACE9861C946CE300C34510 /* Discharge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Discharge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4ACE98A1C946CE300C34510 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E4ACE98C1C946CE300C34510 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -133,6 +136,8 @@
 			children = (
 				E409395B1C94706800519F90 /* LoginViewController.h */,
 				E409395C1C94706800519F90 /* LoginViewController.m */,
+				E43DCEAA1C95BFDD0060D5F1 /* BarcodeSlideViewController.h */,
+				E43DCEAB1C95BFDD0060D5F1 /* BarcodeSlideViewController.m */,
 			);
 			name = LoginView;
 			sourceTree = "<group>";
@@ -312,7 +317,6 @@
 				TargetAttributes = {
 					E4ACE9851C946CE300C34510 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 788Q6NYZ88;
 					};
 				};
 			};
@@ -422,6 +426,7 @@
 				4D15E35F1C94F76D00A034EA /* CommunicationTableViewCell.m in Sources */,
 				4D7FAB621C951DD6008C691B /* ContactTableViewCell.m in Sources */,
 				F0EED00B1C94B17500AABE5A /* Medication.m in Sources */,
+				E43DCEAC1C95BFDD0060D5F1 /* BarcodeSlideViewController.m in Sources */,
 				E40939631C94728400519F90 /* Authorization.m in Sources */,
 				E43DCEA01C94C82D0060D5F1 /* CommunicationTableViewController.m in Sources */,
 			);
@@ -539,7 +544,7 @@
 				INFOPLIST_FILE = Discharge/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = NYP.Dischargek;
+				PRODUCT_BUNDLE_IDENTIFIER = NYP.Discharge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -554,7 +559,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Discharge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = NYP.Dischargek;
+				PRODUCT_BUNDLE_IDENTIFIER = NYP.Discharge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

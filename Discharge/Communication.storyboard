@@ -24,18 +24,21 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1z-NH-62w">
                                             <rect key="frame" x="216" y="13" width="168" height="82"/>
-                                            <color key="backgroundColor" red="0.78823529411764703" green="0.13333333333333333" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" red="0.86666666670000003" green="0.29411764709999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <state key="normal" image="Wirelessmail "/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8MT-TJ-pd6">
+                                            <rect key="frame" x="18" y="13" width="168" height="82"/>
+                                            <color key="backgroundColor" red="0.86666666670000003" green="0.29411764709999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <state key="normal" image="Phonesignal"/>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDD-xz-3FY">
                                             <rect key="frame" x="414" y="13" width="168" height="82"/>
-                                            <color key="backgroundColor" red="0.78823529411764703" green="0.13333333333333333" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" red="0.86666666670000003" green="0.29411764709999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <state key="normal" image="Phonebook"/>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8MT-TJ-pd6">
-                                            <rect key="frame" x="18" y="13" width="168.5" height="82"/>
-                                            <color key="backgroundColor" red="0.78823529411764703" green="0.13333333333333333" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
-                                            <state key="normal" image="Phonesignal"/>
+                                            <connections>
+                                                <segue destination="iKC-jS-QJU" kind="show" id="10z-Q9-TlF"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -82,7 +85,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:15 am at NY Presbyterian Hospital" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="mxk-LM-RTY">
-                                            <rect key="frame" x="106" y="38.5" width="471" height="20.5"/>
+                                            <rect key="frame" x="106" y="38" width="471" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -121,13 +124,7 @@
                             <outlet property="delegate" destination="CjG-Qb-P2U" id="2Z8-5B-Ucw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Appointments" id="BGf-Cd-3eh">
-                        <barButtonItem key="rightBarButtonItem" title="Contact" id="mVA-Wh-PHr">
-                            <connections>
-                                <segue destination="iKC-jS-QJU" kind="show" id="3of-Bf-d3s"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Appointments" id="BGf-Cd-3eh"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fNO-nf-x7S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -149,7 +146,7 @@
                                 <rect key="frame" x="16" y="80" width="568" height="141"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Milstein Hospital" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMt-xB-OXk">
-                                        <rect key="frame" x="221" y="8" width="126.5" height="20.5"/>
+                                        <rect key="frame" x="221" y="8" width="127" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -223,7 +220,7 @@
                                 <rect key="frame" x="16" y="237" width="568" height="141"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allen Pavilion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uav-A6-mJ3">
-                                        <rect key="frame" x="234" y="8" width="100.5" height="20.5"/>
+                                        <rect key="frame" x="234" y="8" width="101" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -249,7 +246,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3n-Qq-0cP">
-                                        <rect key="frame" x="290" y="46" width="266" height="39.5"/>
+                                        <rect key="frame" x="290" y="46" width="266" height="40"/>
                                         <color key="backgroundColor" red="0.23186105069999999" green="0.68684895830000003" blue="0.37146333510000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Patient Services">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -259,7 +256,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jeV-8V-MZX">
-                                        <rect key="frame" x="12" y="46" width="266" height="39.5"/>
+                                        <rect key="frame" x="12" y="46" width="266" height="40"/>
                                         <color key="backgroundColor" red="0.23186105069999999" green="0.68684895830000003" blue="0.37146333510000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Main">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -311,13 +308,13 @@
                                 <rect key="frame" x="16" y="394" width="568" height="141"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MSCHONY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSp-vZ-T3d">
-                                        <rect key="frame" x="242" y="8" width="85" height="20.5"/>
+                                        <rect key="frame" x="242" y="8" width="85" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czU-j5-whO">
-                                        <rect key="frame" x="12" y="46" width="266" height="39.5"/>
+                                        <rect key="frame" x="12" y="46" width="266" height="40"/>
                                         <color key="backgroundColor" red="0.23186105069999999" green="0.68684895830000003" blue="0.37146333510000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Main">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -347,7 +344,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcr-Gv-hxf">
-                                        <rect key="frame" x="290" y="46" width="266" height="39.5"/>
+                                        <rect key="frame" x="290" y="46" width="266" height="40"/>
                                         <color key="backgroundColor" red="0.23186105069999999" green="0.68684895830000003" blue="0.37146333510000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Patient Services">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -400,7 +397,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="01t-Ph-FY6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="878" y="1228"/>
+            <point key="canvasLocation" x="588" y="1228"/>
         </scene>
         <!--Comm-->
         <scene sceneID="y8h-Zp-vJG">
